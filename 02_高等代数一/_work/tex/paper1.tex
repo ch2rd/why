@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper,fontset=windows]{ctexart}
+\input{pre}
+\setcounter{pp}{1}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\songti 高等代数（一）期中模拟试卷（一）}\\[7pt]
+{\normalsize\songti 适用范围：第一章\ 多项式（\S1\,--\,\S9）；第二章\ 行列式（\S2.1\,--\,\S2.7）}\\[3pt]
+{\small\color{hdgray}\songti 多元多项式、对称多项式不在考查范围}
+\end{center}
+\vspace{-4pt}
+
+\begin{center}
+\begin{tabular}{@{}p{0.335\textwidth}p{0.335\textwidth}p{0.26\textwidth}@{}}
+\songti 姓名：\blank[2.5cm] & \songti 学号：\blank[2.5cm] & \songti 得分：\blank[1.9cm]
+\end{tabular}
+\end{center}
+
+\vspace{2pt}
+\hrule height 0.5pt
+\begin{center}
+\setlength{\fboxsep}{6pt}%
+\colorbox{notebg}{\parbox{0.94\textwidth}{\small\songti
+\textbf{考生须知：}
+\begin{note}
+\item 本试卷共 8 题，满分 100 分，考试时间 120 分钟。
+\item 计算题须写出必要的计算过程，证明题须给出完整的推理步骤；只写答案不给分。
+\item 所有答案一律写在答题纸上，写在试卷上无效。
+\end{note}}}
+\end{center}
+\hrule height 0.5pt
+\vspace{4pt}
+
+\secA{一、计算题（每小题 10 分，共 40 分）}
+\begin{qs}
+\item 设
+\[
+f(x)=x^{4}+x^{3}-x-1,\qquad g(x)=x^{3}-x^{2}+x-1 .
+\]
+求 $(f(x),\,g(x))$，并求出多项式 $u(x),\,v(x)\in\mathbb{Q}[x]$，使得
+\[
+u(x)f(x)+v(x)g(x)=(f(x),\,g(x)).
+\]
+
+\item 计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+13 & 6 & 0 & \cdots & 0\\
+6 & 13 & 6 & \cdots & 0\\
+0 & 6 & 13 & \ddots & \vdots\\
+\vdots & \ddots & \ddots & \ddots & 6\\
+0 & \cdots & 0 & 6 & 13
+\end{vmatrix}.
+\]
+
+\item 设 $a_1a_2\cdots a_n\neq 0$。计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+1+a_1 & 1 & 1 & \cdots & 1\\
+1 & 1+a_2 & 1 & \cdots & 1\\
+1 & 1 & 1+a_3 & \cdots & 1\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+1 & 1 & 1 & \cdots & 1+a_n
+\end{vmatrix}.
+\]
+
+\item 求多项式
+\[
+f(x)=x^{4}-x^{3}-7x^{2}+x+6
+\]
+在 $\mathbb{Q}[x]$ 中的标准分解式，并写出 $f(x)$ 在 $\mathbb{R}[x]$ 与 $\mathbb{C}[x]$ 中的分解式。
+\end{qs}
+
+\secA{二、证明题（每小题 15 分，共 60 分）}
+\begin{qs}[resume*]
+\item 记
+\[
+F=\{a+b\sqrt{2}\mid a,b\in\mathbb{Q}\},\qquad R=\{a+b\sqrt{2}\mid a,b\in\mathbb{Z}\}.
+\]
+\begin{sub}
+\item 证明 $F$ 是一个数域；
+\item 证明 $R$ 不是数域。
+\end{sub}
+
+\item 设 $m,n$ 为正整数，$d=(m,\,n)$ 为 $m$ 与 $n$ 的最大公因数。证明：
+\[
+\bigl(x^{m}-1,\;x^{n}-1\bigr)=x^{d}-1 .
+\]
+
+\item 设 $a_1,a_2,\ldots,a_n$ 是数域 $P$ 中 $n$ 个互不相同的数，令
+\[
+\ell_i(x)=\prod_{j\neq i}\frac{x-a_j}{a_i-a_j}\qquad (i=1,2,\ldots,n).
+\]
+\begin{sub}
+\item 证明 $\displaystyle\sum_{i=1}^{n}\ell_i(x)\equiv 1$；
+\item 证明：若 $g(x)\in P[x]$ 且 $\deg g<n$，则 $\displaystyle\sum_{i=1}^{n}g(a_i)\,\ell_i(x)=g(x)$。
+\end{sub}
+
+\item 设 $n\ge 2$，$n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+x & a & a & \cdots & a\\
+a & x & a & \cdots & a\\
+a & a & x & \cdots & a\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+a & a & a & \cdots & x
+\end{vmatrix},\qquad a\neq x .
+\]
+\begin{sub}
+\item 证明 $D_n=(x-a)^{n-1}\bigl(x+(n-1)a\bigr)$；
+\item 求方程 $D_n=0$ 在 $\mathbb{C}$ 中的全部根。
+\end{sub}
+\end{qs}
+
+\end{document}

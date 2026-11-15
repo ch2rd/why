@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper,fontset=windows]{ctexart}
+\input{pre}
+\setcounter{pp}{4}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\songti 高等代数（一）期中模拟试卷（四）}\\[7pt]
+{\normalsize\songti 适用范围：第一章\ 多项式（\S1\,--\,\S9）；第二章\ 行列式（\S2.1\,--\,\S2.7）}\\[3pt]
+{\small\color{hdgray}\songti 多元多项式、对称多项式不在考查范围}
+\end{center}
+\vspace{-4pt}
+
+\begin{center}
+\begin{tabular}{@{}p{0.335\textwidth}p{0.335\textwidth}p{0.26\textwidth}@{}}
+\songti 姓名：\blank[2.5cm] & \songti 学号：\blank[2.5cm] & \songti 得分：\blank[1.9cm]
+\end{tabular}
+\end{center}
+
+\vspace{2pt}
+\hrule height 0.5pt
+\begin{center}
+\setlength{\fboxsep}{6pt}%
+\colorbox{notebg}{\parbox{0.94\textwidth}{\small\songti
+\textbf{考生须知：}
+\begin{note}
+\item 本试卷共 8 题，满分 100 分，考试时间 120 分钟。
+\item 计算题须写出必要的计算过程，证明题须给出完整的推理步骤；只写答案不给分。
+\item 所有答案一律写在答题纸上，写在试卷上无效。
+\end{note}}}
+\end{center}
+\hrule height 0.5pt
+\vspace{4pt}
+
+\secA{一、计算题（每小题 10 分，共 40 分）}
+\begin{qs}
+\item 计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+0&1&2&3&\cdots&n-1\\
+1&0&1&2&\cdots&n-2\\
+2&1&0&1&\cdots&n-3\\
+3&2&1&0&\cdots&n-4\\
+\vdots&\vdots&\vdots&\vdots&\ddots&\vdots\\
+n-1&n-2&n-3&n-4&\cdots&0
+\end{vmatrix}.
+\]
+
+\item 设 $a_1a_2\cdots a_n\neq 0$。计算 $n+1$ 阶行列式
+\[
+D_{n+1}=\begin{vmatrix}
+a_0&b_1&b_2&\cdots&b_n\\
+c_1&a_1&0&\cdots&0\\
+c_2&0&a_2&\cdots&0\\
+\vdots&\vdots&&\ddots&\vdots\\
+c_n&0&\cdots&0&a_n
+\end{vmatrix}.
+\]
+
+\item 设 $\lambda\in\mathbb{C}$。求使多项式
+\[
+f(x)=x^{4}-4x+\lambda
+\]
+有重根的全部 $\lambda$，并对每个 $\lambda$ 写出相应的重根。
+
+\item 设
+\[
+f(x)=2x^{3}-2x^{2}-x+1,\qquad g(x)=x^{2}-1 .
+\]
+求 $(f(x),\,g(x))$，并求 $u(x),v(x)\in\mathbb{Q}[x]$，使 $u(x)f(x)+v(x)g(x)=(f(x),g(x))$。
+\end{qs}
+
+\secA{二、证明题（每小题 15 分，共 60 分）}
+\begin{qs}[resume*]
+\item 设 $c$ 为非零常数，$f(x)\in P[x]$，且
+\[
+f(x-c)=f(x).
+\]
+证明：$f(x)$ 必为常数。
+
+\item 设 $f(x),g(x)\in P[x]$，且 $(f(x),g(x))=1$。证明：
+\begin{sub}
+\item 对任意正整数 $m,n$，都有 $\bigl(f^{m}(x),\,g^{n}(x)\bigr)=1$；
+\item $\bigl(f(x)g(x),\;f(x)+g(x)\bigr)=1$。
+\end{sub}
+
+\item 设
+\[
+f(x)=a_nx^{n}+a_{n-1}x^{n-1}+\cdots+a_0\in\mathbb{Z}[x],\qquad a_na_0\neq 0 .
+\]
+\begin{sub}
+\item 证明：若 $\dfrac{p}{q}$（$p,q$ 为互素的整数，$q>0$）是 $f(x)$ 的有理根，
+      则 $p\mid a_0$，$q\mid a_n$；
+\item 由此证明：首一整系数多项式的有理根必为整数。
+\end{sub}
+
+\item 设 $A$ 为 $m$ 阶方阵，$C$ 为 $n$ 阶方阵，$B$ 为 $m\times n$ 矩阵。证明：
+\[
+\begin{vmatrix}
+A&B\\[2pt]
+0&C
+\end{vmatrix}=|A|\cdot|C| .
+\]
+\end{qs}
+
+\end{document}

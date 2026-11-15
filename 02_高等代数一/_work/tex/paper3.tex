@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper,fontset=windows]{ctexart}
+\input{pre}
+\setcounter{pp}{3}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\songti 高等代数（一）期中模拟试卷（三）}\\[7pt]
+{\normalsize\songti 适用范围：第一章\ 多项式（\S1\,--\,\S9）；第二章\ 行列式（\S2.1\,--\,\S2.7）}\\[3pt]
+{\small\color{hdgray}\songti 多元多项式、对称多项式不在考查范围}
+\end{center}
+\vspace{-4pt}
+
+\begin{center}
+\begin{tabular}{@{}p{0.335\textwidth}p{0.335\textwidth}p{0.26\textwidth}@{}}
+\songti 姓名：\blank[2.5cm] & \songti 学号：\blank[2.5cm] & \songti 得分：\blank[1.9cm]
+\end{tabular}
+\end{center}
+
+\vspace{2pt}
+\hrule height 0.5pt
+\begin{center}
+\setlength{\fboxsep}{6pt}%
+\colorbox{notebg}{\parbox{0.94\textwidth}{\small\songti
+\textbf{考生须知：}
+\begin{note}
+\item 本试卷共 8 题，满分 100 分，考试时间 120 分钟。
+\item 计算题须写出必要的计算过程，证明题须给出完整的推理步骤；只写答案不给分。
+\item 所有答案一律写在答题纸上，写在试卷上无效。
+\end{note}}}
+\end{center}
+\hrule height 0.5pt
+\vspace{4pt}
+
+\secA{一、计算题（每小题 10 分，共 40 分）}
+\begin{qs}
+\item 设 $a,b$ 为常数。计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+a+b&ab&0&\cdots&0\\
+1&a+b&ab&\cdots&0\\
+0&1&a+b&\ddots&\vdots\\
+\vdots&\ddots&\ddots&\ddots&ab\\
+0&\cdots&0&1&a+b
+\end{vmatrix},
+\]
+并就 $a\neq b$ 与 $a=b$ 两种情形分别写出结果。
+
+\item 计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+1&2&3&\cdots&n\\
+1&2^{2}&3^{2}&\cdots&n^{2}\\
+1&2^{3}&3^{3}&\cdots&n^{3}\\
+\vdots&\vdots&\vdots&&\vdots\\
+1&2^{\,n}&3^{\,n}&\cdots&n^{\,n}
+\end{vmatrix}.
+\]
+
+\item 用克拉默法则解下列线性方程组：
+\[
+\begin{cases}
+2x_1+x_2-5x_3+x_4=-9,\\[2pt]
+x_1-3x_2-6x_4=4,\\[2pt]
+2x_2-x_3+2x_4=-4,\\[2pt]
+x_1+4x_2-7x_3+6x_4=-17.
+\end{cases}
+\]
+
+\item 设 $f(x)=x^{4}+1$。
+\begin{sub}
+\item 证明 $f(x)$ 在 $\mathbb{Q}[x]$ 中不可约；
+\item 写出 $f(x)$ 在 $\mathbb{R}[x]$ 与 $\mathbb{C}[x]$ 中的标准分解式。
+\end{sub}
+\end{qs}
+
+\secA{二、证明题（每小题 15 分，共 60 分）}
+\begin{qs}[resume*]
+\item 设 $f(x)\in P[x]$，$n$ 为正整数。证明：
+\[
+(x-1)\mid f(x)\iff \bigl(x^{n}-1\bigr)\mid f(x^{n}).
+\]
+
+\item （高斯引理）
+\begin{sub}
+\item 设 $f(x),g(x)\in\mathbb{Z}[x]$ 都是本原多项式。证明 $f(x)g(x)$ 也是本原多项式；
+\item 设 $f(x)\in\mathbb{Z}[x]$ 本原，$\deg f\ge 1$。证明：若 $f(x)$ 在 $\mathbb{Q}[x]$ 上可约，
+      则 $f(x)$ 在 $\mathbb{Z}[x]$ 上可分解为两个次数较低的本原整系数多项式之积。
+\end{sub}
+
+\item 设 $f_1(x),f_2(x),\ldots,f_s(x)\in P[x]$ 两两互素，$g_1(x),\ldots,g_s(x)\in P[x]$。证明：
+\begin{sub}
+\item 存在 $f(x)\in P[x]$，使得
+\[
+f(x)\equiv g_i(x)\pmod{f_i(x)},\qquad i=1,2,\ldots,s;
+\]
+\item 这样的 $f(x)$ 在模 $f_1f_2\cdots f_s$ 的意义下是唯一的。
+\end{sub}
+
+\item 设 $n\ge 2$，$A=(a_{ij})$ 为 $n$ 阶方阵，且 $A$ 的每一行元素之和与每一列元素之和都等于 $0$。
+证明：$A$ 的所有代数余子式 $A_{ij}$ 都相等。
+\end{qs}
+
+\end{document}

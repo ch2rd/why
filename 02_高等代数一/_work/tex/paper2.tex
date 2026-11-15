@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper,fontset=windows]{ctexart}
+\input{pre}
+\setcounter{pp}{2}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\songti 高等代数（一）期中模拟试卷（二）}\\[7pt]
+{\normalsize\songti 适用范围：第一章\ 多项式（\S1\,--\,\S9）；第二章\ 行列式（\S2.1\,--\,\S2.7）}\\[3pt]
+{\small\color{hdgray}\songti 多元多项式、对称多项式不在考查范围}
+\end{center}
+\vspace{-4pt}
+
+\begin{center}
+\begin{tabular}{@{}p{0.335\textwidth}p{0.335\textwidth}p{0.26\textwidth}@{}}
+\songti 姓名：\blank[2.5cm] & \songti 学号：\blank[2.5cm] & \songti 得分：\blank[1.9cm]
+\end{tabular}
+\end{center}
+
+\vspace{2pt}
+\hrule height 0.5pt
+\begin{center}
+\setlength{\fboxsep}{6pt}%
+\colorbox{notebg}{\parbox{0.94\textwidth}{\small\songti
+\textbf{考生须知：}
+\begin{note}
+\item 本试卷共 8 题，满分 100 分，考试时间 120 分钟。
+\item 计算题须写出必要的计算过程，证明题须给出完整的推理步骤；只写答案不给分。
+\item 所有答案一律写在答题纸上，写在试卷上无效。
+\end{note}}}
+\end{center}
+\hrule height 0.5pt
+\vspace{4pt}
+
+\secA{一、计算题（每小题 10 分，共 40 分）}
+\begin{qs}
+\item 设 $n\ge 3$，$x_1,x_2,\ldots,x_n$ 为任意数。计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+1&1&\cdots&1\\
+x_1&x_2&\cdots&x_n\\
+\vdots&\vdots&&\vdots\\
+x_1^{\,n-2}&x_2^{\,n-2}&\cdots&x_n^{\,n-2}\\
+x_1^{\,n}&x_2^{\,n}&\cdots&x_n^{\,n}
+\end{vmatrix},
+\]
+并将结果写成 $n$ 阶范德蒙德行列式与 $\displaystyle\sum_{i=1}^{n}x_i$ 的乘积。
+
+\item 设 $a_1,\ldots,a_n$ 与 $b_1,\ldots,b_n$ 为任意数，计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+a_1+b_1&a_1+b_2&\cdots&a_1+b_n\\
+a_2+b_1&a_2+b_2&\cdots&a_2+b_n\\
+\vdots&\vdots&&\vdots\\
+a_n+b_1&a_n+b_2&\cdots&a_n+b_n
+\end{vmatrix},
+\]
+并就 $n=2$ 与 $n\ge 3$ 两种情形分别写出结果。
+
+\item 设
+\[
+f(x)=x^{5}-x^{4}-2x^{3}+2x^{2}+x-1 .
+\]
+求 $(f(x),\,f'(x))$，并写出 $f(x)$ 的所有重因式及其重数。
+
+\item 设 $f(x)=x^{3}+ax+b\in\mathbb{R}[x]$，其中 $a,b$ 为实参数。
+\begin{sub}
+\item 求使 $f(x)$ 有重根的全部实数对 $(a,b)$；
+\item 对满足条件的 $(a,b)$，写出 $f(x)$ 的重根。
+\end{sub}
+\end{qs}
+
+\secA{二、证明题（每小题 15 分，共 60 分）}
+\begin{qs}[resume*]
+\item 设 $m,n,k$ 为非负整数。证明：
+\[
+x^{2}+x+1\ \Big|\ x^{3m}+x^{3n+1}+x^{3k+2}.
+\]
+
+\item 设 $f(x)\in\mathbb{R}[x]$，$\deg f=n\ge 1$。证明：
+\begin{sub}
+\item 若 $\alpha\in\mathbb{C}$ 是 $f(x)$ 的 $k$ 重根，则共轭数 $\bar\alpha$ 也是 $f(x)$ 的 $k$ 重根；
+\item 若 $n$ 为奇数，则 $f(x)$ 在 $\mathbb{R}$ 中至少有一个根；
+\item 若 $f(x)$ 在 $\mathbb{R}[x]$ 中不可约且 $\deg f\ge 2$，则 $\deg f=2$。
+\end{sub}
+
+\item 设 $p$ 为素数，$\Phi_p(x)=x^{p-1}+x^{p-2}+\cdots+x+1$。证明：$\Phi_p(x)$ 在 $\mathbb{Q}[x]$ 上不可约。
+
+\item 设 $a_1,a_2,\ldots,a_n$ 是数域 $P$ 中 $n$ 个互不相同的数，
+\[
+V_n=\begin{vmatrix}
+1&1&\cdots&1\\
+a_1&a_2&\cdots&a_n\\
+a_1^{2}&a_2^{2}&\cdots&a_n^{2}\\
+\vdots&\vdots&&\vdots\\
+a_1^{\,n-1}&a_2^{\,n-1}&\cdots&a_n^{\,n-1}
+\end{vmatrix}.
+\]
+\begin{sub}
+\item 证明 $V_n=\displaystyle\prod_{1\le i<j\le n}(a_j-a_i)\neq 0$；
+\item 设 $b_1,\ldots,b_n\in P$。证明：存在唯一的多项式 $f(x)\in P[x]$，$\deg f\le n-1$，使得
+$f(a_i)=b_i\ (i=1,2,\ldots,n)$。
+\end{sub}
+\end{qs}
+
+\end{document}

@@ -1,0 +1,327 @@
+﻿\documentclass[11pt,a4paper,fontset=windows]{ctexart}
+\input{pre}
+\setcounter{pp}{1}
+\fancyhead[L]{\small\color{hdgray}\songti 外校高等代数期中真题精选\ \ 多项式与行列式}
+\fancyhead[R]{\small\color{hdgray}\songti 共 14 题\ \ 附简答}
+
+\newcommand{\src}[1]{\hfill{\small\color{hdgray}\songti #1}}
+\newcommand{\sd}{\textbf{解：}}
+\newcommand{\qa}[1]{\par\vspace{2pt}{\small\songti\textbf{答／提示：}#1}\par}
+\newcommand{\prob}[2]{\Needspace{5\baselineskip}\par\vspace{10pt}\noindent
+  \textbf{#1}\hspace{0.4em}#2\par\vspace{3pt}}
+\newcommand{\grp}[1]{\Needspace{9\baselineskip}\par\vspace{14pt}%
+  {\large\bfseries\songti #1}\par\vspace{2pt}\hrule height 0.5pt\par\vspace{6pt}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\songti 外校高等代数（一）期中真题精选}\\[4pt]
+{\LARGE\bfseries\songti ——多项式与行列式}\\[7pt]
+{\small\color{hdgray}\songti 按本次考试范围筛选：第 1 章\ 多项式（\S1\,--\,\S9）；第 2 章\ 行列式（\S2.1\,--\,\S2.7）}\\[2pt]
+{\small\color{hdgray}\songti 不含多元多项式与对称多项式；已剔除矩阵运算、向量组、线性方程组一般理论、秩等超出范围的内容}
+\end{center}
+\vspace{-2pt}
+\hrule height 0.5pt
+\vspace{6pt}
+
+{\small\songti
+\textbf{取材与筛选说明：}
+\begin{note}
+\item 题源为已下载的\textbf{真实期中卷}原件（见文末来源表）：北京大学 2013 秋、2015 秋；厦门大学 2022、2024、2025 秋；北京工业大学 2025 秋。
+\item 上述学校的高代（一）期中考试时间多在 11 月中旬，命题范围已推进到“矩阵／向量组／秩”，
+      因此\textbf{可用的多项式题偏少、行列式题偏多}；凡超出本次范围的题目一律剔除，未作臆改。
+\item 每题后附\textbf{简答或提示}；标“※”者需用到伴随矩阵／分块矩阵，属第 4 章内容，
+      本次期中不考，可先跳过，留作期末复习。
+\item 南京大学（本校）历年期中真题已在 \texttt{试卷/} 与 \texttt{答案/} 目录中，故未在此重复收录。
+\end{note}}
+
+\grp{一、多项式}
+
+\prob{1.}{若 $(x-1)^{2}\mid x^{3}+Ax^{2}+B$，则 $A-B=\underline{\hspace{2.6cm}}$。\src{北京工业大学 2025—2026 期中\ 一(1)，5 分}}
+
+\prob{2.}{（判断对错）多项式 $x^{2025}+2025x+5$ 在实数域上不可约。\src{北京工业大学 2025—2026 期中\ 二(4)，3 分}}
+
+\prob{3.}{已知多项式 $f(x)$ 满足
+\[
+f(1)=3,\qquad f(-1)=1,\qquad f'(1)=7,
+\]
+求 $x^{3}-x^{2}-x+1$ 除 $f(x)$ 所得的余式。\src{北京工业大学 2025—2026 期中\ 三(9)，10 分}}
+
+\prob{4.}{求多项式
+\[
+f(x)=x^{4}-x^{3}-3x^{2}+5x-2
+\]
+的有理根和重因式。\src{北京工业大学 2025—2026 期中\ 三(10)，10 分}}
+
+\grp{二、行列式}
+
+\prob{5.}{计算行列式
+\[
+\begin{vmatrix}
+1&2&3&4\\
+5&6&7&8\\
+9&10&11&12\\
+13&14&15&16
+\end{vmatrix}.
+\]
+\src{北京工业大学 2025—2026 期中\ 一(2)，5 分}}
+
+\prob{6.}{已知
+\[
+D=\begin{vmatrix}
+3&-5&2&1\\
+1&1&0&-5\\
+-1&3&1&3\\
+2&4&1&3
+\end{vmatrix},
+\]
+求 $M_{11}+M_{21}-M_{41}$，其中 $M_{ij}$ 是元素 $a_{ij}$ 的余子式。\src{北京工业大学 2025—2026 期中\ 三(11)，10 分}}
+
+\prob{7.}{设 $A=(\alpha,\beta,\gamma)$，$B=(\alpha,\beta,\delta)$ 都是 3 阶方阵，且 $\det A=a$，$\det B=b$，
+其中 $\alpha,\beta,\gamma,\delta$ 为 3 维列向量。求 $\det(3A-B)$。\src{厦门大学 2024—2025《高等代数(1)》期中\ 一(1)，3 分}}
+
+\prob{8.}{已知 $A,B,C$ 都是行列式为 $2$ 的 3 阶矩阵。求
+\[
+\begin{vmatrix}
+O&-5A\\
+B^{-1}&C
+\end{vmatrix}
+\]
+的值。\src{厦门大学 2022—2023《高等代数(1)》期中\ 一(1)，3 分}}
+
+\prob{9.}{计算 $n$ 阶“三对角”行列式
+\[
+D_n=\begin{vmatrix}
+2&1&0&\cdots&0\\
+1&2&1&\ddots&\vdots\\
+0&1&\ddots&\ddots&0\\
+\vdots&\ddots&\ddots&2&1\\
+0&\cdots&0&1&2
+\end{vmatrix}.
+\]
+\src{北京大学 2013 秋高代(I)期中（回忆版）三，10 分}}
+
+\prob{10.}{计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+\dfrac{1}{1-a_1b_1}&\dfrac{1}{1-a_1b_2}&\cdots&\dfrac{1}{1-a_1b_n}\\[8pt]
+\dfrac{1}{1-a_2b_1}&\dfrac{1}{1-a_2b_2}&\cdots&\dfrac{1}{1-a_2b_n}\\[8pt]
+\vdots&\vdots&&\vdots\\[4pt]
+\dfrac{1}{1-a_nb_1}&\dfrac{1}{1-a_nb_2}&\cdots&\dfrac{1}{1-a_nb_n}
+\end{vmatrix}
+\qquad(\text{各分母不为零}).
+\]
+\src{北京大学 2013 秋高代(I)期中（回忆版）五，10 分（原卷最难一题）}}
+
+\prob{11.}{计算 $n$ 阶行列式
+\[
+D_n=\begin{vmatrix}
+5&4&0&\cdots&0\\
+1&5&4&\cdots&0\\
+0&1&5&\ddots&\vdots\\
+\vdots&&\ddots&\ddots&4\\
+0&\cdots&&1&5
+\end{vmatrix}.
+\]
+\src{北京大学 2015—2016 高代期中\ 一（2），（原卷第一题共 30 分）}}
+
+\grp{三、拓展（需用伴随矩阵／分块矩阵，超出本次范围，供期末复习）}
+
+\prob{12.}{※ 设 $A=(a_{ij})$ 为 3 阶方阵，$A_{ij}$ 为 $a_{ij}$ 的代数余子式。若 $A$ 每一行的元素之和都等于 $2$，
+且 $|A|=3$，求 $A_{11}+A_{21}+A_{31}$。\src{厦门大学 2024—2025 期中\ 一(3)，3 分}}
+
+\prob{13.}{※ 设 $A=(a_{ij})$ 是 3 阶非零矩阵，$A_{ij}$ 是 $a_{ij}$ 的代数余子式。若
+\[
+a_{ij}+A_{ij}=0\qquad(i,j=1,2,3),
+\]
+求 $\det A$。\src{厦门大学 2025—2026 期中\ 一(3)，3 分}}
+
+\prob{14.}{※ 设 $A,B,C,D$ 都是 $n$ 阶方阵，且 $A$ 可逆。证明：
+\[
+\det\begin{pmatrix}A&B\\[2pt]C&D\end{pmatrix}
+=\det(A)\cdot\det\bigl(D-CA^{-1}B\bigr).
+\]
+\src{厦门大学 2025—2026 期中\ 八(1)，10 分}}
+
+\newpage
+\grp{简答与提示}
+
+\prob{1.}{\sd 由 $(x-1)^{2}\mid f(x)=x^{3}+Ax^{2}+B$ 知 $f(1)=f'(1)=0$，即
+\[
+1+A+B=0,\qquad 3+2A=0\ \Longrightarrow\ A=-\frac32,\quad B=\frac12,
+\]
+故 $A-B=-2$。\\[2pt]
+（等价说法：作带余除法 $x^{3}+Ax^{2}+B=(x-1)^{2}(x+A+2)+(2A+3)x+(B-A-2)$，
+令余式为零同样得 $A=-\frac32,\ B=\frac12$。）}
+
+\prob{2.}{\sd \textbf{错。}$x^{2025}+2025x+5$ 是奇次实系数多项式。由“奇次实系数多项式必有实根”，
+设 $\alpha\in\mathbb{R}$ 为其根，则 $(x-\alpha)$ 是它的一个次数为 $1$ 的真因式，故它在 $\mathbb{R}[x]$ 上可约。
+\\[2pt]
+\emph{注：}“不可约”在 $\mathbb{R}[x]$ 中只可能是次数 $1$ 的多项式或判别式为负的二次多项式，
+所以任何次数 $\ge3$ 的实系数多项式在 $\mathbb{R}[x]$ 上都可约。}
+
+\prob{3.}{\sd $x^{3}-x^{2}-x+1=(x-1)^{2}(x+1)$。设余式为 $r(x)=ax^{2}+bx+c$，则
+$f(x)=q(x)(x-1)^{2}(x+1)+r(x)$，且
+\[
+r(1)=f(1)=3,\qquad r(-1)=f(-1)=1,\qquad r'(1)=f'(1)=7
+\]
+（末式成立是因为 $\bigl[q(x)(x-1)^{2}(x+1)\bigr]'$ 在 $x=1$ 处为 $0$）。于是
+\[
+\begin{cases}a+b+c=3,\\ a-b+c=1,\\ 2a+b=7\end{cases}
+\ \Longrightarrow\ a=3,\ b=1,\ c=-1 .
+\]
+故余式为 $\;r(x)=3x^{2}+x-1$。}
+
+\prob{4.}{\sd 有理根只可能为 $\pm1,\pm2$。由 $f(1)=0$ 得 $(x-1)\mid f$，综合除法：
+\[
+f=(x-1)\bigl(x^{3}-3x+2\bigr)=(x-1)^{2}\bigl(x^{2}+x-2\bigr)=(x-1)^{3}(x+2).
+\]
+故\textbf{有理根}为 $x=1$ 与 $x=-2$；\textbf{重因式}为 $(x-1)$（重数 $3$），
+而 $(f,f')=(x-1)^{2}$。}
+
+\prob{5.}{\sd \textbf{0。}注意第 $1$ 行与第 $3$ 行逐项之和恰为第 $2$ 行的 $2$ 倍：
+\[
+R_1+R_3=2R_2\quad\Longrightarrow\quad R_2=\tfrac12(R_1+R_3),
+\]
+即第 $2$ 行是其余行的线性组合，由行列式性质（某一行是其余行的线性组合则行列式为 $0$）得 $D=0$。
+\\[2pt]
+\emph{一般结论：}若 $n$ 阶行列式的元素 $a_{ij}=i+j-1$（即各行为等差数列），则 $n\ge3$ 时行列式为 $0$。}
+
+\prob{6.}{\sd 关键是化成“代数余子式的线性组合”。
+注意 $A_{11}=M_{11},\ A_{21}=-M_{21},\ A_{41}=-M_{41}$，故
+\[
+M_{11}+M_{21}-M_{41}=A_{11}-A_{21}+A_{41}
+=\sum_{i=1}^{4}c_iA_{i1},\qquad (c_1,c_2,c_3,c_4)=(1,-1,0,1).
+\]
+而 $\sum_i c_iA_{i1}$ 恰是把 $D$ 的第 $1$ 列换成 $(1,-1,0,1)^{\mathrm T}$ 所得行列式：
+\[
+\begin{vmatrix}
+1&-5&2&1\\
+-1&1&0&-5\\
+0&3&1&3\\
+1&4&1&3
+\end{vmatrix}
+=70 .
+\]
+故 $M_{11}+M_{21}-M_{41}=70$。\\[2pt]
+（直接算三个余子式亦可：$M_{11}=5,\ M_{21}=5,\ M_{41}=-60$。）}
+
+\prob{7.}{\sd $3A-B=(3\alpha-\alpha,\ 3\beta-\beta,\ 3\gamma-\delta)=(2\alpha,\ 2\beta,\ 3\gamma-\delta)$。由行列式对列的线性性，
+\[
+\det(3A-B)=\det(2\alpha,2\beta,3\gamma-\delta)
+=4\cdot 3\det(\alpha,\beta,\gamma)-4\det(\alpha,\beta,\delta)
+=12a-4b .
+\]
+（注意 $\det(2\alpha,2\beta,\cdot)$ 中前两列各提出因子 $2$。）}
+
+\prob{8.}{\sd 用分块行列式的公式
+$\begin{vmatrix}O&X\\Y&Z\end{vmatrix}=(-1)^{mn}|X||Y|$（$X$ 为 $m$ 阶、$Y$ 为 $n$ 阶）。
+这里 $m=n=3$，$X=-5A$，$Y=B^{-1}$，故
+\[
+\begin{vmatrix}O&-5A\\B^{-1}&C\end{vmatrix}
+=(-1)^{9}\,|-5A|\cdot|B^{-1}|
+=-(-5)^{3}|A|\cdot\frac1{|B|}
+=125\cdot 2\cdot\frac12=125 .
+\]
+\\[2pt]
+\emph{另法：}交换前 $3$ 行与后 $3$ 行（共 $3\times3=9$ 次对换）并利用 $|X|=|-5A|$。}
+
+\prob{9.}{\sd 按第一行展开：$D_n=2D_{n-1}-1\cdot 1\cdot D_{n-2}$，即
+\[
+D_n=2D_{n-1}-D_{n-2},\qquad D_1=2,\quad D_2=\begin{vmatrix}2&1\\1&2\end{vmatrix}=3 .
+\]
+于是 $D_{n}-D_{n-1}=D_{n-1}-D_{n-2}=\cdots=D_2-D_1=1$，故 $\{D_n\}$ 是首项 $2$、公差 $1$ 的等差数列：
+\[
+D_n=n+1 .
+\]
+\\[2pt]
+\emph{另法：}特征方程 $t^{2}-2t+1=0$ 有二重根 $t=1$，设 $D_n=(\alpha+\beta n)\cdot1^{n}$，由初值得 $\alpha=\beta=1$。}
+
+\prob{10.}{\sd 这是\textbf{柯西（Cauchy）行列式}，结果为
+\[
+D_n=\frac{\displaystyle\prod_{1\le i<j\le n}(a_j-a_i)\;(b_j-b_i)}
+{\displaystyle\prod_{i=1}^{n}\prod_{j=1}^{n}\bigl(1-a_ib_j\bigr)} .
+\]
+\emph{推导思路：}从第 $j$ 列提出 $\dfrac{1}{1-a_1b_j}$，再对 $i\ge2$ 作行变换
+$R_i\leftarrow R_i-R_1$，则第 $i$ 行第 $j$ 个元素化为
+\[
+\frac{1}{1-a_ib_j}-\frac{1}{1-a_1b_j}
+=\frac{(a_i-a_1)b_j}{(1-a_ib_j)(1-a_1b_j)},
+\]
+于是每行都可提出 $(a_i-a_1)$、每列都可提出 $\dfrac{b_j}{1-a_ib_j}$；重复上述步骤（对 $a_2,b_2$，再对 $a_3,b_3$，……
+逐步降阶），最后得到乘积形式。$n=1$ 时即为 $\dfrac{1}{1-a_1b_1}$，与公式一致。
+\\[2pt]
+\emph{校验：}$n=2$ 时 $D_2=\dfrac{(a_2-a_1)(b_2-b_1)}{(1-a_1b_1)(1-a_1b_2)(1-a_2b_1)(1-a_2b_2)}$，可直接验算。}
+
+\prob{11.}{\sd 按第一行展开：$D_n=5D_{n-1}-4\cdot 1\cdot D_{n-2}$，且 $D_1=5,\ D_2=25-4=21$。
+特征方程 $t^{2}-5t+4=0$ 的两根为 $t=1,4$，设 $D_n=\alpha\cdot1^{n}+\beta\cdot4^{n}$，由
+$\alpha+4\beta=5,\ \alpha+16\beta=21$ 得 $\beta=\dfrac43,\ \alpha=-\dfrac13$。故
+\[
+D_n=\frac{4^{\,n+1}-1}{3}.
+\]
+\\[2pt]
+\emph{校验：}$n=1$ 得 $5$，$n=2$ 得 $21$，与初值一致。}
+
+\prob{12.}{\sd ※ \textbf{$\dfrac32$。}
+记 $e=(1,1,1)^{\mathrm T}$。设 $A^{*}$ 为 $A$ 的伴随矩阵，则 $A^{*}=|A|A^{-1}=3A^{-1}$。
+“每行元素之和都等于 $2$”即 $Ae=2e$，两边左乘 $A^{-1}$ 得 $A^{-1}e=\dfrac12 e$，于是
+\[
+A^{*}e=3A^{-1}e=\frac32\,e .
+\]
+即 $A^{*}$ 的每一行元素之和都等于 $\dfrac32$。又 $(A^{*})_{ij}=A_{ji}$，故
+\[
+A_{11}+A_{21}+A_{31}=\sum_{i=1}^{3}(A^{*})_{1i}=\frac32 .
+\]
+\emph{一般结论：}若各行元素之和都等于 $c$，则 $A_{11}+A_{21}+\cdots+A_{n1}=\dfrac{|A|}{c}$。}
+
+\prob{13.}{\sd ※ \textbf{$\det A=-1$。}
+条件 $a_{ij}+A_{ij}=0$ 即 $A^{\mathrm T}=-A^{*}$（$A^{*}$ 为伴随矩阵）。于是
+\[
+A\,A^{\mathrm T}=A\,(-A^{*})=-AA^{*}=-|A|E .
+\]
+两边取行列式（$A$ 为 3 阶）：
+\[
+|A|\cdot\bigl|A^{\mathrm T}\bigr|=(-|A|)^{3}\ \Longrightarrow\ |A|^{2}=-|A|^{3}
+\ \Longrightarrow\ |A|^{2}\bigl(1+|A|\bigr)=0 .
+\]
+故 $|A|=0$ 或 $|A|=-1$。若 $|A|=0$，则 $A^{*}=O$，由条件 $a_{ij}=-A_{ij}=0$ 得 $A=O$，与“$A$ 非零”矛盾。
+故 $|A|=-1$。}
+
+\prob{14.}{\sd ※ 作分块初等变换：两边左乘分块矩阵
+$\begin{pmatrix}E&O\\-CA^{-1}&E\end{pmatrix}$（其行列式为 $1$），得
+\[
+\begin{pmatrix}E&O\\-CA^{-1}&E\end{pmatrix}
+\begin{pmatrix}A&B\\C&D\end{pmatrix}
+=\begin{pmatrix}A&B\\O&D-CA^{-1}B\end{pmatrix}.
+\]
+右边是分块上三角矩阵，其行列式等于对角块的乘积 $\det(A)\det(D-CA^{-1}B)$；左边乘子的行列式为 $1$，
+故原行列式等于 $\det(A)\det(D-CA^{-1}B)$。}
+
+\vspace{12pt}
+\grp{题源一览}
+
+{\small\songti
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}p{4.6cm}p{4.2cm}p{5.6cm}@{}}
+\textbf{学校} & \textbf{考试} & \textbf{本汇编中对应题号}\\
+\hline
+北京工业大学 & 2025—2026 学年《高等代数I》期中 & 1, 2, 3, 4, 5, 6\\
+厦门大学 & 2022—2023《高等代数(1)》期中 & 8\\
+厦门大学 & 2024—2025《高等代数(1)》期中 & 7, 12\\
+厦门大学 & 2025—2026《高等代数(1)》期中 & 13, 14\\
+北京大学 & 2013 秋 高代(I) 期中（回忆版） & 9, 10\\
+北京大学 & 2015—2016 高代 期中 & 11\\
+\end{tabular}
+\end{center}
+
+\smallskip
+原件（PDF／DOC／JPG）均保存在 \texttt{外校真题/raw/} 目录，可直接查阅。
+}
+\vspace{4pt}
+\hrule height 0.5pt
+\vspace{4pt}
+{\small\color{hdgray}\songti 说明：本汇编只做题面转录与筛选，题目文字力求与原卷一致；个别原卷为扫描件或含公式对象，
+已按可辨识内容转录，并对明显的手误做了标注。}
+
+\end{document}

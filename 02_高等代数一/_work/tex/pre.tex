@@ -1,0 +1,43 @@
+% ===== 公共导言区：高等代数（一）期中模拟卷 =====
+\usepackage{amsmath,amssymb}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage[margin=2.05cm,top=2.35cm,bottom=2.0cm,headsep=11pt,includefoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{zhnumber}
+\usepackage{needspace}
+
+\definecolor{hdgray}{gray}{0.32}
+\definecolor{lngray}{gray}{0.5}
+\definecolor{notebg}{gray}{0.955}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\small\color{hdgray}\songti 高等代数（一）\ 期中模拟试卷（\thepp）}
+\fancyhead[R]{\small\color{hdgray}\songti 考试时间：120 分钟\quad 满分：100 分}
+\fancyfoot[C]{\small\color{lngray}\songti 第 \thepage\ 页\quad 共 \pageref{LastPage}\ 页}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\linespread{1.16}
+
+% 题目列表 1—8 连续编号
+\newlist{qs}{enumerate}{1}
+\setlist[qs]{label=\textbf{\arabic*.},ref=\arabic*,leftmargin=2.55em,
+  labelsep=0.55em,itemsep=23pt,topsep=6pt,parsep=0pt}
+\newlist{note}{enumerate}{1}
+\setlist[note]{label=(\arabic*),leftmargin=1.75em,itemsep=1.5pt,topsep=2.5pt,parsep=0pt}
+\newlist{sub}{enumerate}{1}
+\setlist[sub]{label=(\arabic*),leftmargin=1.9em,itemsep=3pt,topsep=3pt,parsep=0pt}
+
+\newcommand{\secA}[1]{\Needspace{9\baselineskip}\par\vspace{10pt}{\large\bfseries\songti #1}\par\vspace{3pt}\nopagebreak}
+\newcommand{\blank}[1][2.6cm]{\underline{\hspace{#1}}}
+\newcounter{pp}
+\renewcommand{\thepp}{\chinese{pp}}

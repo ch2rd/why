@@ -1,0 +1,901 @@
+\documentclass[11pt,a4paper,fontset=windows]{ctexart}
+\input{pre}
+\setcounter{pp}{1}
+\fancyhead[L]{\small\color{hdgray}\songti 高等代数（一）\ 期中模拟卷\ 参考答案与提示}
+\fancyhead[R]{\small\color{hdgray}\songti 共六套\ \ 100 分／套}
+
+\newcommand{\paperhead}[1]{\Needspace{10\baselineskip}\par\vspace{16pt}%
+  {\Large\bfseries\songti #1}\par\vspace{3pt}\hrule height 0.7pt\par\vspace{8pt}}
+\newcommand{\sola}[2]{\Needspace{4\baselineskip}\par\vspace{10pt}%
+  \noindent\textbf{#1}\hspace{0.45em}{\small\color{hdgray}\songti #2}\par\vspace{1pt}}
+\newcommand{\pf}{\textbf{证明：}}
+\newcommand{\sd}{\textbf{解：}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\songti 高等代数（一）期中模拟卷}\\[5pt]
+{\LARGE\bfseries\songti 参考答案与提示}\\[8pt]
+{\small\color{hdgray}\songti 六套试卷\ \ 每套 8 题（计算 4 题 $\times$ 10 分，证明 4 题 $\times$ 15 分）\ \ 满分 100 分}
+\end{center}
+\vspace{-2pt}
+\hrule height 0.5pt
+\vspace{6pt}
+
+{\small\songti
+\textbf{使用说明：}
+\begin{note}
+\item 每题给出完整解答；标“提示”处为可省略的细节，考场上不必尽写。
+\item 证明题按“关键步骤”给分；凡用到的定理（辗转相除法、艾森斯坦判别法、范德蒙德行列式、
+      拉格朗日插值恒等式等）须写出定理名或条件，否则酌情扣分。
+\item 六套卷考点互不重复、难度相当，建议限时 120 分钟成套完成后再对答案。
+\end{note}}
+
+%==================== 卷一 ====================
+\paperhead{模拟试卷（一）}
+
+\sola{1.}{（10 分）}\sd
+作辗转相除：
+\[
+f(x)=(x+2)g(x)+(x-1)^{2},\qquad
+g(x)=(x+1)(x-1)^{2}+2(x-1).
+\]
+故 $(x-1)^{2}$ 与 $2(x-1)$ 的最大公因式为 $x-1$，从而
+\[
+\bigl(f(x),g(x)\bigr)=x-1 .
+\]
+再把上式回代：
+\[
+2(x-1)=g-(x+1)(x-1)^{2}=g-(x+1)\bigl[f-(x+2)g\bigr]
+=-(x+1)f+\bigl(x^{2}+3x+3\bigr)g .
+\]
+两边除以 $2$ 得
+\[
+u(x)=-\frac{x+1}{2},\qquad v(x)=\frac{x^{2}+3x+3}{2}.
+\]
+\emph{校验：}$-\frac{x+1}{2}f+\frac{x^{2}+3x+3}{2}g=x-1$。
+
+\sola{2.}{（10 分）}\sd
+按第一行展开：第一行只有 $13,\,6$ 两个非零元，且删去 $(1,2)$ 位置后所得 $n-1$ 阶子式的第一列为
+$(6,0,\dots,0)^{\mathrm T}$，故
+\[
+D_n=13D_{n-1}-6\cdot 6\,D_{n-2}=13D_{n-1}-36D_{n-2},
+\qquad D_1=13,\ D_2=169-36=133 .
+\]
+特征方程 $t^{2}-13t+36=0$ 的两根为 $t=4,\,9$，故可设 $D_n=\alpha\cdot 4^{n}+\beta\cdot 9^{n}$。由
+$4\alpha+9\beta=13,\ 16\alpha+81\beta=133$ 解得 $\alpha=-\frac45,\ \beta=\frac95$。于是
+\[
+D_n=\frac{9^{\,n+1}-4^{\,n+1}}{5}.
+\]
+
+\sola{3.}{（10 分）}\sd
+令第 $i$ 行为 $R_i$，第 $j$ 列为 $C_j$。先作 $R_i\leftarrow R_i-R_1\ (i=2,\dots,n)$，此时
+\[
+R_i=(-a_1,\ 0,\ \dots,\ 0,\ a_i,\ 0,\ \dots,\ 0)\qquad(i\ge 2),
+\]
+其中 $-a_1$ 在第 $1$ 列、$a_i$ 在第 $i$ 列。再作
+$C_1\leftarrow C_1+\displaystyle\sum_{i=2}^{n}\frac{a_1}{a_i}C_i$：因 $C_i$ 在第 $i$ 行为 $a_i$、在第 $1$ 行为 $1$，
+故第 $i$ 行（$i\ge2$）的第 $1$ 个元素变为 $-a_1+\frac{a_1}{a_i}\cdot a_i=0$，而第 $1$ 行的第 $1$ 个元素变为
+$1+a_1+a_1\sum_{i=2}^{n}\frac1{a_i}$。于是行列式化为上三角：
+\[
+D_n=\Bigl(1+a_1+a_1\sum_{i=2}^{n}\frac1{a_i}\Bigr)a_2a_3\cdots a_n
+=a_1a_2\cdots a_n\Bigl(1+\sum_{i=1}^{n}\frac1{a_i}\Bigr).
+\]
+
+\sola{4.}{（10 分）}\sd
+有理根只可能是 $\pm1,\pm2,\pm3,\pm6$。由 $f(1)=0$ 得 $(x-1)\mid f$，综合除法得
+\[
+f=(x-1)\bigl(x^{3}-7x-6\bigr).
+\]
+又 $x^{3}-7x-6$ 在 $x=-1$ 处为 $0$，故 $=(x+1)(x^{2}-x-6)=(x+1)(x-3)(x+2)$。于是
+\[
+f(x)=(x-1)(x+1)(x+2)(x-3).
+\]
+四个根全为有理数，故 $\mathbb{Q}$、$\mathbb{R}$、$\mathbb{C}$ 上的标准分解式相同。
+
+\sola{5.}{（15 分）}\pf
+(1) 显然 $0=0+0\sqrt2,\ 1=1+0\sqrt2\in F$。设 $a+b\sqrt2,\ c+d\sqrt2\in F$，则
+\[
+(a+b\sqrt2)\pm(c+d\sqrt2)=(a\pm c)+(b\pm d)\sqrt2\in F,\quad
+(a+b\sqrt2)(c+d\sqrt2)=(ac+2bd)+(ad+bc)\sqrt2\in F .
+\]
+再设 $a+b\sqrt2\neq0$。若 $a^{2}-2b^{2}=0$，则 $a=\pm b\sqrt2$；当 $b\neq0$ 时得 $\sqrt2=\pm a/b\in\mathbb{Q}$，矛盾；
+当 $b=0$ 时得 $a=0$，亦矛盾。故 $a^{2}-2b^{2}\neq0$，且
+\[
+\frac1{a+b\sqrt2}=\frac{a-b\sqrt2}{a^{2}-2b^{2}}=\frac{a}{a^{2}-2b^{2}}-\frac{b}{a^{2}-2b^{2}}\sqrt2\in F .
+\]
+所以 $F$ 对四则运算封闭，是数域。
+\par
+(2) $1\in R$，$2=2+0\sqrt2\in R$，但 $\dfrac12\notin R$：若 $\frac12=a+b\sqrt2\ (a,b\in\mathbb{Z})$，
+则 $b\neq0$ 时 $\sqrt2=\frac{1/2-a}{b}\in\mathbb{Q}$ 矛盾；$b=0$ 时 $a=\frac12\notin\mathbb{Z}$ 矛盾。
+即 $R$ 对除法不封闭，不是数域。
+
+\sola{6.}{（15 分）}\pf
+设 $m=qn+r\ (0\le r<n)$。
+\par
+先用一个基本事实：\textbf{对任意正整数 $q$，都有 $x^{n}-1\mid x^{qn}-1$。}事实上令 $t=x^{n}$，由
+\[
+t^{q}-1=(t-1)\bigl(t^{q-1}+t^{q-2}+\cdots+t+1\bigr)
+\]
+代回 $t=x^{n}$ 即得
+\[
+x^{qn}-1=(x^{n}-1)\bigl(x^{n(q-1)}+x^{n(q-2)}+\cdots+x^{n}+1\bigr),
+\]
+第二个因式是 $x$ 的整系数多项式，故整除成立。（一般地，$x^{a}-1\mid x^{b}-1\iff a\mid b$。）
+\par
+有了这一事实，就可以把 $x^{m}-1$ 中“被 $x^{n}-1$ 整除的那部分”剥掉：
+\[
+x^{m}-1=x^{r}\bigl(x^{qn}-1\bigr)+\bigl(x^{r}-1\bigr),
+\]
+于是（最大公因式在“加上另一多项式的倍数”下不变）
+\[
+\bigl(x^{m}-1,\ x^{n}-1\bigr)=\bigl(x^{n}-1,\ x^{r}-1\bigr).
+\]
+这说明指数对 $(m,n)$ 作一次辗转相除，最大公因式不变。反复进行辗转相除，指数对最终变为 $(d,0)$，其中
+$d=(m,n)$，故所求最大公因式为 $\bigl(x^{d}-1,\ x^{0}-1\bigr)=x^{d}-1$（首一）。
+\par\smallskip
+\emph{另证（根的角度）}：设 $\zeta$ 为任一复根，则 $\zeta^{m}=\zeta^{n}=1$；由 $d=um+vn$ 得
+$\zeta^{d}=(\zeta^{m})^{u}(\zeta^{n})^{v}=1$。反之 $\zeta^{d}=1\Rightarrow\zeta^{m}=\zeta^{n}=1$。
+故 $x^{m}-1$ 与 $x^{n}-1$ 的根集恰为 $x^{d}-1$ 的根集；三者均无重根（其导数与原式互素），
+故 $\bigl(x^{m}-1,x^{n}-1\bigr)=x^{d}-1$。
+
+\sola{7.}{（15 分）}\pf
+先注意 $\ell_i(a_k)=\delta_{ik}$（$k=i$ 时为 $1$，否则为 $0$），且 $\deg\ell_i=n-1$。
+\par
+(1) 令 $\Phi(x)=\sum_{i=1}^{n}\ell_i(x)-1$，则 $\deg\Phi\le n-1$，且
+$\Phi(a_k)=1-1=0\ (k=1,\dots,n)$。$\Phi$ 有 $n$ 个互不相同的根而次数小于 $n$，故 $\Phi\equiv0$。
+\par
+(2) 令 $\Psi(x)=\sum_{i=1}^{n}g(a_i)\ell_i(x)-g(x)$。因 $\deg g<n$、$\deg\ell_i=n-1$，有 $\deg\Psi\le n-1$；
+又 $\Psi(a_k)=g(a_k)-g(a_k)=0\ (k=1,\dots,n)$。故 $\Psi\equiv0$，即
+$\sum_{i=1}^{n}g(a_i)\ell_i(x)=g(x)$。（这就是拉格朗日插值公式。）
+
+\sola{8.}{（15 分）}\pf
+(1) 作列变换 $C_1\leftarrow C_1+C_2+\cdots+C_n$。此时 $C_1$ 的每一个元素都是 $x+(n-1)a$，提出因子得
+\[
+D_n=\bigl(x+(n-1)a\bigr)\begin{vmatrix}
+1&a&a&\cdots&a\\
+1&x&a&\cdots&a\\
+1&a&x&\cdots&a\\
+\vdots&\vdots&\vdots&\ddots&\vdots\\
+1&a&a&\cdots&x
+\end{vmatrix}.
+\]
+再作 $R_i\leftarrow R_i-R_1\ (i=2,\dots,n)$，则第 $i$ 行（$i\ge2$）只有第 $i$ 个元素 $x-a$ 非零，故所得行列式为上三角，
+其值为 $(x-a)^{n-1}$。于是
+\[
+D_n=\bigl(x+(n-1)a\bigr)(x-a)^{n-1}.
+\]
+\par
+(2) 由 (1)，$D_n=0\iff x=a$ 或 $x=-(n-1)a$。注意因 $a\neq x$，$x=a$ 恰使因子 $(x-a)^{n-1}$ 为零
+（$n-1$ 重），故 $D_n$ 在 $\mathbb{C}$ 中的全部根为
+\[
+x=a\ (n-1\ \text{重}),\qquad x=-(n-1)a\ (1\ \text{重}).
+\]
+
+%==================== 卷二 ====================
+\paperhead{模拟试卷（二）}
+
+\sola{1.}{（10 分）}\sd
+记 $V_n=\det\bigl(x_i^{\,j-1}\bigr)$ 为 $n$ 阶范德蒙德行列式。所求行列式与 $V_n$ 只有最后一行不同，
+按最后一列展开时二者的代数余子式相同，故
+\[
+D_n=\sum_{i=1}^{n}x_i^{\,n}C_{ni},\qquad V_n=\sum_{i=1}^{n}x_i^{\,n-1}C_{ni},
+\]
+其中 $C_{ni}$ 是 $V_n$ 中 $(n,i)$ 位置的代数余子式。由范德蒙德行列式的展开式可得
+\[
+C_{ni}=(-1)^{n+i}\prod_{\substack{1\le j<k\le n\\ j,k\neq i}}(x_k-x_j)
+=\frac{V_n}{\prod_{j\neq i}(x_i-x_j)} .
+\]
+于是 $D_n=V_n\displaystyle\sum_{i=1}^{n}\frac{x_i^{\,n}}{\prod_{j\neq i}(x_i-x_j)}$。
+\par
+由拉格朗日插值恒等式（第一卷 7 题）：对 $\deg p\le n-1$ 的 $p$，
+$p(t)=\sum_i p(x_i)\dfrac{\prod_{j\neq i}(t-x_j)}{\prod_{j\neq i}(x_i-x_j)}$。取 $p(t)=t^{n}$，
+两边之差 $\;t^{n}-\sum_i x_i^{\,n}\ell_i(t)\;$ 的次数 $\le n$ 且在 $x_1,\dots,x_n$ 处为零，故等于 $c\prod_i(t-x_i)$；
+比较 $t^{n}$ 的系数得 $c=1$。再比较 $t^{n-1}$ 的系数：
+\[
+0-\sum_{i=1}^{n}\frac{x_i^{\,n}}{\prod_{j\neq i}(x_i-x_j)}=-\sum_{i=1}^{n}x_i
+\ \Longrightarrow\
+\sum_{i=1}^{n}\frac{x_i^{\,n}}{\prod_{j\neq i}(x_i-x_j)}=\sum_{i=1}^{n}x_i .
+\]
+因此
+\[
+D_n=\Bigl(\sum_{i=1}^{n}x_i\Bigr)\prod_{1\le i<j\le n}(x_j-x_i).
+\]
+
+\sola{2.}{（10 分）}\sd
+记 $a=(a_1,\dots,a_n)^{\mathrm T},\ e=(1,\dots,1)^{\mathrm T}$，则第 $j$ 列为 $C_j=a+b_je$。
+\par
+$n\ge3$：若某个 $j\ge2$ 使 $b_j=b_1$，则 $C_j=C_1$，$D_n=0$；否则
+$C_j-C_1=(b_j-b_1)e$，于是
+\[
+C_3-C_1=\frac{b_3-b_1}{b_2-b_1}\,(C_2-C_1),
+\]
+三列线性相关，故 $D_n=0$。
+\par
+$n=2$：直接计算
+\[
+D_2=(a_1+b_1)(a_2+b_2)-(a_1+b_2)(a_2+b_1)=(a_2-a_1)(b_1-b_2).
+\]
+
+\sola{3.}{（10 分）}\sd
+先分解。由 $f(1)=0$ 得 $(x-1)\mid f$，综合除法：
+\[
+f=(x-1)\bigl(x^{4}-2x^{2}+1\bigr)=(x-1)\bigl(x^{2}-1\bigr)^{2}=(x-1)^{3}(x+1)^{2}.
+\]
+又 $\gcd(x-1,x+1)=1$，故
+\[
+\bigl(f,f'\bigr)=(x-1)^{2}(x+1).
+\]
+$f$ 的不可约因式为 $x-1$（重数 $3$）与 $x+1$（重数 $2$），二者都是重因式。
+
+\sola{4.}{（10 分）}\sd
+$f'(x)=3x^{2}+a$。设 $t$ 是 $f$ 的重根，则 $f(t)=f'(t)=0$，即
+\[
+3t^{2}+a=0,\qquad t^{3}+at+b=0 .
+\]
+由第一式 $a=-3t^{2}$，代入第二式得 $b=2t^{3}$。消去 $t$：
+\[
+a^{3}=-27t^{6},\quad b^{2}=4t^{6}\ \Longrightarrow\ 4a^{3}+27b^{2}=0 .
+\]
+反之，若 $a\neq0$ 且 $4a^{3}+27b^{2}=0$，取 $t=-\dfrac{3b}{2a}$，则
+$t^{2}=-\dfrac{a}{3},\ t^{3}=\dfrac{b}{2}$，直接验证 $f(t)=f'(t)=0$，即 $t$ 为重根。
+\par
+结论：$f$ 有重根 $\iff 4a^{3}+27b^{2}=0$。此时
+\[
+a\neq0:\ \text{重根}\ t=-\frac{3b}{2a};\qquad
+a=b=0:\ f=x^{3},\ \text{重根}\ 0 .
+\]
+
+\sola{5.}{（15 分）}\pf
+设 $\omega$ 是 $x^{2}+x+1$ 的根，则 $\omega^{3}=1$ 且 $\omega\neq1$，从而 $1+\omega+\omega^{2}=0$。
+于是
+\[
+\omega^{3m}+\omega^{3n+1}+\omega^{3k+2}=1+\omega+\omega^{2}=0 .
+\]
+同理 $\bar\omega=\omega^{2}$ 也满足上式。记 $g(x)=x^{3m}+x^{3n+1}+x^{3k+2}$，则 $g(\omega)=g(\bar\omega)=0$。
+因 $x^{2}+x+1$ 无重根（与 $2x+1$ 互素），两个不同的复根 $\omega,\bar\omega$ 各给一个一次因式，
+故 $(x-\omega)(x-\bar\omega)=x^{2}+x+1$ 整除 $g(x)$。
+
+\sola{6.}{（15 分）}\pf
+(1) 设 $\alpha$ 是 $f$ 的 $k$ 重根，即 $f^{(\nu)}(\alpha)=0\ (\nu=0,1,\dots,k-1)$，$f^{(k)}(\alpha)\neq0$。
+由于 $f\in\mathbb{R}[x]$，各阶导数的系数仍为实数，故
+\[
+f^{(\nu)}(\bar\alpha)=\overline{f^{(\nu)}(\alpha)}=0\ (\nu<k),\qquad
+f^{(k)}(\bar\alpha)=\overline{f^{(k)}(\alpha)}\neq0 .
+\]
+故 $\bar\alpha$ 也是 $f$ 的 $k$ 重根。
+\par
+(2) 由 (1)，$f$ 的非实根成对出现（$\alpha\neq\bar\alpha$），故非实根个数为偶数。总根数 $n$ 为奇数，
+所以实根个数为奇数，至少为 $1$。
+\par
+(3) 设 $f$ 在 $\mathbb{R}[x]$ 中不可约，$\deg f\ge2$。若 $f$ 有实根 $\alpha$，则 $x-\alpha$ 是 $f$ 的次数为 $1$ 的因式，
+与 $f$ 不可约（$\deg f\ge2$）矛盾，故 $f$ 无实根。于是 $f$ 的任一根 $\alpha$ 非实，且
+$(x-\alpha)(x-\bar\alpha)=x^{2}-2\,\mathrm{Re}(\alpha)\,x+|\alpha|^{2}\in\mathbb{R}[x]$ 是 $f$ 的次数为 $2$ 的因式。
+由不可约性得 $\deg f=2$。
+
+\sola{7.}{（15 分）}\pf
+先注意恒等式
+\[
+\Phi_p(x)=\frac{x^{p}-1}{x-1}\qquad(x\neq1),
+\]
+故 $\Phi_p(y+1)=\dfrac{(y+1)^{p}-1}{y}=y^{p-1}+\binom{p}{1}y^{p-2}+\cdots+\binom{p}{p-1}$。
+\par
+对 $1\le k\le p-1$，$p$ 是素数，$\binom pk=\dfrac{p!}{k!(p-k)!}$ 的分子含因子 $p$ 而分母不含，故 $p\mid\binom pk$；
+常数项 $\binom{p}{p-1}=p$ 不被 $p^{2}$ 整除；首项系数为 $1$ 不被 $p$ 整除。由艾森斯坦判别法（取素数 $p$），
+$\Phi_p(y+1)$ 在 $\mathbb{Q}[x]$ 上不可约。
+\par
+最后说明“平移不改变不可约性”：若 $\Phi_p(x)=G(x)H(x)$ 是 $\mathbb{Q}[x]$ 中的非平凡分解，则
+$\Phi_p(y+1)=G(y+1)H(y+1)$ 也是非平凡分解，矛盾。故 $\Phi_p(x)$ 在 $\mathbb{Q}[x]$ 上不可约。
+
+\sola{8.}{（15 分）}\pf
+(1) 对 $n$ 归纳。$n=1$ 时 $V_1=1$，乘积为空积 $=1$，成立。
+设结论对 $n-1$ 成立（$n\ge2$）。自下而上依次作行变换
+\[
+R_{i}\leftarrow R_{i}-a_nR_{i-1}\qquad(i=n-1,n-2,\dots,1),
+\]
+则第 $k$ 行（$k\ge2$）的第 $j$ 个元素变为 $a_j^{\,k-2}(a_j-a_n)$，而第 $1$ 行不变。第 $n$ 列的元素
+（$k\ge2$）为 $a_n^{\,k-2}(a_n-a_n)=0$，故第 $n$ 列只有第 $1$ 行的元素 $1$ 非零。按第 $n$ 列展开得
+\[
+V_n=(-1)^{n+1}\begin{vmatrix}
+a_1-a_n&a_2-a_n&\cdots&a_{n-1}-a_n\\
+a_1(a_1-a_n)&a_2(a_2-a_n)&\cdots&a_{n-1}(a_{n-1}-a_n)\\
+\vdots&\vdots&&\vdots\\
+a_1^{\,n-2}(a_1-a_n)&a_2^{\,n-2}(a_2-a_n)&\cdots&a_{n-1}^{\,n-2}(a_{n-1}-a_n)
+\end{vmatrix}.
+\]
+从第 $j$ 列提出 $(a_j-a_n)$，所得 $n-1$ 阶行列式正是 $V_{n-1}$，于是
+\[
+V_n=(-1)^{n+1}\Bigl[\prod_{j=1}^{n-1}(a_j-a_n)\Bigr]V_{n-1}
+=\Bigl[\prod_{j=1}^{n-1}(a_n-a_j)\Bigr]V_{n-1},
+\]
+其中用了 $(-1)^{n+1}(-1)^{n-1}=1$。由归纳假设
+$V_n=\prod_{j<n}(a_n-a_j)\prod_{1\le i<j\le n-1}(a_j-a_i)=\prod_{1\le i<j\le n}(a_j-a_i)$。
+当 $a_1,\dots,a_n$ 互不相同时，每个因子非零，故 $V_n\neq0$。
+\par
+(2) \textbf{唯一性}：若 $f,g$ 都满足条件，令 $h=f-g$，则 $\deg h\le n-1$ 且 $h(a_i)=0\ (i=1,\dots,n)$。
+$h$ 有 $n$ 个互不相同的根而次数小于 $n$，故 $h\equiv0$，即 $f=g$。
+\par
+\textbf{存在性}：设 $f=c_0+c_1x+\cdots+c_{n-1}x^{n-1}$，条件 $f(a_i)=b_i$ 是关于
+$c_0,\dots,c_{n-1}$ 的线性方程组，其系数矩阵的行列式为 $V_n^{\mathrm T}$ 的行列式 $=V_n\neq0$。
+由克拉默法则，方程组有唯一解，即所需 $f$ 存在。
+
+%==================== 卷三 ====================
+\paperhead{模拟试卷（三）}
+
+\sola{1.}{（10 分）}\sd
+按第一行展开，删去 $(1,2)$ 位置后所得子式的第一列为 $(1,0,\dots,0)^{\mathrm T}$，故
+\[
+D_n=(a+b)D_{n-1}-ab\,D_{n-2},\qquad D_1=a+b,\quad D_2=(a+b)^{2}-ab=a^{2}+ab+b^{2}.
+\]
+$t^{2}-(a+b)t+ab=0$ 的两根为 $a,b$。
+\par
+当 $a\neq b$ 时，设 $D_n=c_1a^{n}+c_2b^{n}$，由 $D_1,D_2$ 解得
+$c_1=\dfrac{a}{a-b},\ c_2=-\dfrac{b}{a-b}$，故
+\[
+D_n=\frac{a^{\,n+1}-b^{\,n+1}}{a-b}.
+\]
+当 $a=b$ 时，递推式为 $D_n=2aD_{n-1}-a^{2}D_{n-2}$，验证 $D_n=(n+1)a^{n}$ 满足该递推式及初值，
+故 $D_n=(n+1)a^{n}$。
+
+\sola{2.}{（10 分）}\sd
+从第 $j$ 列提出公因子 $j\ (j=1,\dots,n)$，得
+\[
+D_n=n!\begin{vmatrix}
+1&1&\cdots&1\\
+1&2&\cdots&n\\
+\vdots&\vdots&&\vdots\\
+1&2^{\,n-1}&\cdots&n^{\,n-1}
+\end{vmatrix}
+=n!\prod_{1\le i<j\le n}(j-i).
+\]
+最后一个乘积可按 $j$ 分组：$\prod_{j=2}^{n}\prod_{i=1}^{j-1}(j-i)=\prod_{j=2}^{n}(j-1)!$。故
+\[
+D_n=n!\prod_{k=1}^{n-1}k! .
+\]
+
+\sola{3.}{（10 分）}\sd
+系数行列式
+\[
+D=\begin{vmatrix}2&1&-5&1\\1&-3&0&-6\\0&2&-1&2\\1&4&-7&6\end{vmatrix}=27\neq0,
+\]
+故由克拉默法则方程组有唯一解。把第 $j$ 列换成右端列，计算得
+\[
+D_1=27,\qquad D_2=-27,\qquad D_3=54,\qquad D_4=0 .
+\]
+于是
+\[
+x_1=\frac{D_1}{D}=1,\quad x_2=\frac{D_2}{D}=-1,\quad x_3=\frac{D_3}{D}=2,\quad x_4=\frac{D_4}{D}=0 .
+\]
+\emph{校验：}代入原方程组，四个方程分别成立。
+
+\sola{4.}{（10 分）}\sd
+(1) 令 $y=x+1$，则
+\[
+f(y+1)=(y+1)^{4}+1=y^{4}+4y^{3}+6y^{2}+4y+2 .
+\]
+取素数 $p=2$：首项系数 $1$ 不被 $2$ 整除，其余四个系数 $4,6,4,2$ 都被 $2$ 整除，常数项 $2$ 不被 $2^{2}=4$ 整除。
+由艾森斯坦判别法，$f(y+1)$ 在 $\mathbb{Q}[y]$ 上不可约，从而 $f(x)$ 在 $\mathbb{Q}[x]$ 上不可约（否则平移后也分解）。
+\par
+(2) 由 $(x^{2}+1)^{2}=x^{4}+2x^{2}+1$ 得配方法（“苏菲·热尔曼恒等式”）
+\[
+x^{4}+1=(x^{2}+1)^{2}-2x^{2}=(x^{2}+1)^{2}-(\sqrt2\,x)^{2}
+=(x^{2}-\sqrt2\,x+1)(x^{2}+\sqrt2\,x+1),
+\]
+两个二次因式的判别式各为 $2-4<0$，故这是 $\mathbb{R}[x]$ 上的标准分解。
+\par
+在 $\mathbb{C}[x]$ 上，$x^{4}+1$ 的四个根为 $\zeta_k=\mathrm{e}^{\mathrm{i}(2k+1)\pi/4}\ (k=0,1,2,3)$，即
+$\dfrac{\sqrt2}{2}(\pm1\pm\mathrm{i})$，故
+\[
+x^{4}+1=\prod_{k=0}^{3}\bigl(x-\zeta_k\bigr),
+\quad
+\zeta_0=\tfrac{\sqrt2}{2}(1+\mathrm{i}),\ \zeta_1=\tfrac{\sqrt2}{2}(-1+\mathrm{i}),\
+\zeta_2=\tfrac{\sqrt2}{2}(-1-\mathrm{i}),\ \zeta_3=\tfrac{\sqrt2}{2}(1-\mathrm{i}).
+\]
+
+\sola{5.}{（15 分）}\pf
+\emph{预备：}$x^{n}-1$ 在 $\mathbb{C}$ 中有 $n$ 个互不相同的根。事实上
+$\bigl(x^{n}-1,\,(x^{n}-1)'\bigr)=(x^{n}-1,\,nx^{n-1})=1$（因 $0$ 不是 $x^{n}-1$ 的根），故无重根。
+\par
+(1) 设 $(x-1)\mid f(x)$，则 $f(1)=0$。对 $x^{n}-1$ 的任一复根 $\zeta$（即 $\zeta^{n}=1$），有
+$f(\zeta^{n})=f(1)=0$，故 $\zeta$ 是 $f(x^{n})$ 的根。$x^{n}-1$ 的 $n$ 个根互异，故其每一个一次因式都整除 $f(x^{n})$，
+从而 $\bigl(x^{n}-1\bigr)\mid f(x^{n})$。
+\par
+(2) 设 $\bigl(x^{n}-1\bigr)\mid f(x^{n})$。因 $(x-1)\mid(x^{n}-1)$，得 $(x-1)\mid f(x^{n})$，
+即 $f(1^{n})=f(1)=0$，故 $(x-1)\mid f(x)$。
+
+\sola{6.}{（15 分）}\pf
+(1) 设 $f=\sum a_ix^{i},\ g=\sum b_jx^{j}$。反设 $fg$ 不是本原多项式，则存在素数 $p$ 整除 $fg$ 的所有系数。
+因 $f,g$ 本原，可令
+\[
+i=\min\{k:\ p\nmid a_k\},\qquad j=\min\{k:\ p\nmid b_k\}
+\]
+（$f,g$ 本原保证这样的 $i,j$ 存在）。考察 $fg$ 中 $x^{i+j}$ 的系数
+\[
+c_{i+j}=\sum_{r+s=i+j}a_rb_s .
+\]
+当 $(r,s)\neq(i,j)$ 时，若 $r<i$ 则 $p\mid a_r$，若 $s<j$ 则 $p\mid b_s$，故每一项都被 $p$ 整除；
+而 $p\nmid a_i,\ p\nmid b_j$ 及 $p$ 为素数给出 $p\nmid a_ib_j$。于是 $p\nmid c_{i+j}$，与假设矛盾。
+故 $fg$ 本原。
+\par
+(2) 设 $f=GH$ 是 $\mathbb{Q}[x]$ 中的分解，$1\le\deg G,\deg H<\deg f$。取非零整数 $c,d$ 使
+$G_1=cG,\ H_1=dH$ 都是本原整系数多项式（例如取 $c$ 为 $G$ 各系数分母的最小公倍数，再除以系数的最大公因数）。
+则 $cd\,f=G_1H_1$。由 (1) $G_1H_1$ 本原；而 $f$ 本原，故 $cd\,f$ 的“容度”（各系数最大公因数）为 $|cd|$。
+比较容度得 $|cd|=1$，即 $cd=\pm1$，于是 $f=\pm G_1H_1$，其中 $G_1,H_1$ 是本原整系数多项式，次数都比 $\deg f$ 低。
+
+\sola{7.}{（15 分）}\pf
+(1) 记 $h_i(x)=\prod_{j\neq i}f_j(x)$。因 $f_1,\dots,f_s$ 两两互素，$(f_i,h_i)=1$，故存在
+$u_i,v_i\in P[x]$ 使
+\[
+u_if_i+v_ih_i=1\ \Longrightarrow\ v_ih_i\equiv1\pmod{f_i}.
+\]
+令
+\[
+f(x)=\sum_{i=1}^{s}g_i(x)v_i(x)h_i(x).
+\]
+对固定的 $i$：当 $j\neq i$ 时 $f_i\mid h_j$，故第 $j$ 项被 $f_i$ 整除；第 $i$ 项
+$g_iv_ih_i\equiv g_i\pmod{f_i}$。所以 $f\equiv g_i\pmod{f_i}$，$i=1,\dots,s$。
+\par
+(2) 设 $f,f^{*}$ 都满足条件，则 $f-f^{*}\equiv0\pmod{f_i}$，即 $f_i\mid f-f^{*}$ 对一切 $i$。
+因 $f_1,\dots,f_s$ 两两互素，$f_1f_2\cdots f_s\mid f-f^{*}$，即在模 $f_1\cdots f_s$ 的意义下 $f$ 唯一。
+
+\sola{8.}{（15 分）}\pf
+\emph{引理：}若一个 $n$ 阶行列式的某一行是其余各行的线性组合，则该行列式为 $0$
+（取系数不为零的那一行，用其余行消去它即得一行全零）。
+\par
+\textbf{第一步：固定 $j$，证明 $A_{ij}$ 与 $i$ 无关。}
+由按第 $j$ 列展开，$A_{ij}$ 等于把 $A$ 的第 $j$ 列换成 $e_i^{\mathrm T}$（第 $i$ 个分量为 $1$、其余为 $0$）所得行列式。
+由行列式对第 $j$ 列的线性性，
+\[
+A_{ij}-A_{i'j}=\det\bigl(A\ \text{的第 } j\ \text{列换成}\ e_i-e_{i'}\bigr).
+\]
+在右边的矩阵中：第 $j$ 列以外的各列与 $A$ 相同，列和为 $0$（题设）；第 $j$ 列的元素之和为 $1-1=0$。
+故所有列之和为零向量，即例如第 $1$ 列是其余各列的线性组合，由引理该行列式为 $0$。于是 $A_{ij}=A_{i'j}$。
+\par
+\textbf{第二步：固定 $i$，证明 $A_{ij}$ 与 $j$ 无关。}
+由按第 $i$ 行展开，$A_{ij}$ 等于把 $A$ 的第 $i$ 行换成 $e_j^{\mathrm T}$ 所得行列式。由行的线性性，
+\[
+A_{ij}-A_{ij'}=\det\bigl(A\ \text{的第 } i\ \text{行换成}\ e_j-e_{j'}\bigr).
+\]
+右边的矩阵：第 $i$ 行以外的各行与 $A$ 相同，行和为 $0$（题设）；第 $i$ 行的元素之和为 $1-1=0$。
+故所有行之和为零向量，由引理该行列式为 $0$，即 $A_{ij}=A_{ij'}$。
+\par
+两步合起来即得所有 $A_{ij}$ 彼此相等。
+
+%==================== 卷四 ====================
+\paperhead{模拟试卷（四）}
+
+\sola{1.}{（10 分）}\sd
+记原矩阵为 $A_n=(|i-j|)$。先自下而上作 $R_i\leftarrow R_i-R_{i-1}\ (i=n,n-1,\dots,2)$，
+则新第 $i$ 行为：第 $1,\dots,i-1$ 个元素为 $1$，第 $i,\dots,n$ 个元素为 $-1$（第 $1$ 行不变，仍为
+$0,1,2,\dots,n-1$）。再作 $R_i\leftarrow R_i-R_{i-1}\ (i=3,\dots,n)$，因相邻两行同形，得
+\[
+R_i=(0,\dots,0,\underbrace{2}_{i-1},0,\dots,0)\qquad(i\ge3),\qquad
+R_2=(1,-1,-1,\dots,-1),
+\]
+\[
+D_n=\begin{vmatrix}
+0&1&2&3&\cdots&n-1\\
+1&-1&-1&-1&\cdots&-1\\
+0&2&0&0&\cdots&0\\
+0&0&2&0&\cdots&0\\
+\vdots& & &\ddots&\ddots&\vdots\\
+0&0&\cdots&0&2&0
+\end{vmatrix}
+\]
+（第 $3,\dots,n$ 行依次为 $2e_2,2e_3,\dots,2e_{n-1}$，故最后一行最后一个元素为 $0$。）
+再对第 $1$ 行作 $R_1\leftarrow R_1+(n-1)R_2$，其第 $n$ 个元素变为
+$(n-1)+(n-1)(-1)=0$，于是第 $n$ 列只剩第 $2$ 行的 $-1$。按第 $n$ 列展开，得
+\[
+D_n=(-1)^{n+2}\cdot(-1)\cdot
+\begin{vmatrix}
+n-1&2-n&3-n&\cdots&-1\\
+0&2&0&\cdots&0\\
+0&0&2&\cdots&0\\
+\vdots& & &\ddots&\vdots\\
+0&\cdots&0&2&0
+\end{vmatrix}.
+\]
+右端行列式再按第 $1$ 列展开，得 $(n-1)\cdot 2^{\,n-2}$。于是
+\[
+D_n=(-1)^{n+2}(-1)(n-1)2^{\,n-2}=(-1)^{n-1}(n-1)2^{\,n-2}.
+\]
+
+\sola{2.}{（10 分）}\sd
+依次作行变换 $R_1\leftarrow R_1-\dfrac{b_i}{a_i}R_{i+1}\ (i=1,2,\dots,n)$，则第 $1$ 行中第 $i+1$
+个元素变为 $b_i-\dfrac{b_i}{a_i}\cdot a_i=0$，即
+\[
+D_{n+1}=\begin{vmatrix}
+a_0-\sum\limits_{i=1}^{n}\dfrac{b_ic_i}{a_i}&0&0&\cdots&0\\
+c_1&a_1&0&\cdots&0\\
+c_2&0&a_2&\cdots&0\\
+\vdots&\vdots&&\ddots&\vdots\\
+c_n&0&\cdots&0&a_n
+\end{vmatrix}
+=a_1a_2\cdots a_n\Bigl(a_0-\sum_{i=1}^{n}\frac{b_ic_i}{a_i}\Bigr).
+\]
+
+\sola{3.}{（10 分）}\sd
+$f'(x)=4x^{3}-4=4(x-1)(x^{2}+x+1)$。设 $\alpha$ 是 $f$ 的重根，则 $f(\alpha)=f'(\alpha)=0$。
+由 $f'(\alpha)=0$ 得 $\alpha^{3}=1$；代入 $f(\alpha)=0$：
+\[
+\alpha^{4}-4\alpha+\lambda=\alpha\cdot\alpha^{3}-4\alpha+\lambda=\lambda-3\alpha=0
+\ \Longrightarrow\ \lambda=3\alpha .
+\]
+而 $\alpha^{3}=1$ 给出 $\alpha\in\{1,\omega,\omega^{2}\}$，其中 $\omega=\mathrm{e}^{2\pi\mathrm{i}/3}=-\frac12+\frac{\sqrt3}{2}\mathrm{i}$。
+故
+\[
+\lambda\in\{3,\ 3\omega,\ 3\omega^{2}\},\qquad\text{等价地}\ \ \lambda^{3}=27\ (\text{即}\ \lambda^{3}-27=0).
+\]
+相应的重根分别为 $\alpha=1,\ \omega,\ \omega^{2}$。例如 $\lambda=3$ 时
+$x^{4}-4x+3=(x-1)^{2}(x^{2}+2x+3)$，$x=1$ 恰为二重根。
+
+\sola{4.}{（10 分）}\sd
+作辗转相除：
+\[
+f(x)=(2x-2)g(x)+(x-1),
+\]
+而 $g(x)=(x-1)(x+1)$，故 $(f,g)=x-1$。由上式直接得
+\[
+(x-1)=1\cdot f(x)+(2-2x)\,g(x),
+\]
+即 $u(x)=1,\ v(x)=2-2x$。
+
+\sola{5.}{（15 分）}\pf
+反设 $f(x)$ 不是常数，$\deg f=n\ge1$。设 $\alpha$ 是 $f$ 在 $\mathbb{C}$ 中的一个根。由
+$f(x-c)=f(x)$ 得
+\[
+f(\alpha-c)=f(\alpha)=0 ,
+\]
+即 $\alpha-c$ 也是根；同理 $\alpha-2c,\alpha-3c,\dots$ 都是 $f$ 的根。因 $c\neq0$，这些数两两不同，
+故 $f$ 有无穷多个根。但 $n$ 次非零多项式至多有 $n$ 个根，矛盾。故 $f$ 必为常数。
+
+\sola{6.}{（15 分）}\pf
+(1) 设 $p$ 是 $f^{m}$ 与 $g^{n}$ 的公因式中的不可约多项式，则 $p\mid f^{m}\Rightarrow p\mid f$，
+$p\mid g^{n}\Rightarrow p\mid g$，于是 $p$ 是 $f,g$ 的公因式，与 $(f,g)=1$ 矛盾。故 $(f^{m},g^{n})=1$。
+\par
+(2) 设不可约多项式 $p\mid fg$ 且 $p\mid f+g$。由 $p\mid fg$ 与 $p$ 不可约得 $p\mid f$ 或 $p\mid g$。
+若 $p\mid f$，则由 $p\mid f+g$ 得 $p\mid g$，与 $(f,g)=1$ 矛盾；若 $p\mid g$ 同理矛盾。
+故 $(fg,f+g)=1$。
+
+\sola{7.}{（15 分）}\pf
+(1) 设 $f(p/q)=0$，两边乘以 $q^{n}$：
+\[
+a_np^{n}+a_{n-1}p^{n-1}q+\cdots+a_1pq^{n-1}+a_0q^{n}=0 .
+\]
+移项后模 $q$ 考察：左边除 $a_np^{n}$ 外各项都含因子 $q$，故 $q\mid a_np^{n}$；
+因 $(p,q)=1$，得 $q\mid a_n$。同理移项后模 $p$ 考察，除 $a_0q^{n}$ 外各项都含因子 $p$，得 $p\mid a_0q^{n}$，
+由 $(p,q)=1$ 得 $p\mid a_0$。
+\par
+(2) 若 $f$ 首一，则 $a_n=1$。由 (1)，$q\mid a_n=1$，而 $q>0$，故 $q=1$，即根 $p/q=p\in\mathbb{Z}$。
+
+\sola{8.}{（15 分）}\pf
+对 $m$ 作归纳。记所求行列式为 $|M|$，其中 $M=\begin{pmatrix}A&B\\0&C\end{pmatrix}$。
+\par
+$m=1$ 时按第 $1$ 列展开：该列只有 $a_{11}$ 非零（其余 $m-1$ 个位置落在 $0$ 块中），删去第 $1$ 行第 $1$ 列后
+仍是同型的分块矩阵，其中 $A$ 的部分为空（$0$ 阶），故 $|M|=a_{11}|C|=|A||C|$。
+\par
+设结论对 $m-1$ 成立（$m\ge2$）。按第 $1$ 列展开：
+\[
+|M|=\sum_{i=1}^{m}a_{i1}(-1)^{i+1}|M_{i1}| .
+\]
+$M_{i1}$ 是删去第 $i$ 行第 $1$ 列所得矩阵，它仍是分块上三角矩阵
+$\begin{pmatrix}A_{i1}&B_i\\0&C\end{pmatrix}$，其中 $A_{i1}$ 是 $A$ 删去第 $i$ 行第 $1$ 列所得的 $m-1$ 阶子式矩阵。
+由归纳假设 $|M_{i1}|=|A_{i1}|\cdot|C|$，代入得
+\[
+|M|=|C|\cdot\sum_{i=1}^{m}a_{i1}(-1)^{i+1}|A_{i1}|=|C|\cdot|A|,
+\]
+最后一步正是把 $|A|$ 按第 $1$ 列展开。
+
+%==================== 卷五 ====================
+\paperhead{模拟试卷（五）}
+
+\sola{1.}{（10 分）}\sd
+按三阶行列式的对角线法则展开：
+\[
+\begin{aligned}
+f(x)&=(x+1)(x+2)(x+3)+2\cdot3\cdot1+3\cdot1\cdot2\\
+&\qquad-3\cdot(x+2)\cdot1-2\cdot1\cdot(x+3)-(x+1)\cdot3\cdot2\\
+&=(x^{3}+6x^{2}+11x+6)+12-3(x+2)-2(x+3)-6(x+1)\\
+&=x^{3}+6x^{2}.
+\end{aligned}
+\]
+故 $f(x)=x^{2}(x+6)$，根为 $x=0$（二重）与 $x=-6$；$\mathbb{R}[x]$ 中的标准分解式为
+\[
+f(x)=x^{2}(x+6).
+\]
+
+\sola{2.}{（10 分）}\sd
+设 $A=(a_{ij})$，$a_{ij}=i+j-1$。则对 $i=1,\dots,n-2$ 及每个 $j$ 有
+\[
+a_{ij}+a_{i+2,j}=(i+j-1)+(i+2+j-1)=2(i+1+j-1)=2a_{i+1,j},
+\]
+即 $R_i+R_{i+2}=2R_{i+1}$。故 $R_2=\frac12(R_1+R_3)$，第 $2$ 行是其余行的线性组合，因此
+\[
+D_n=0\qquad(n\ge3).
+\]
+
+\sola{3.}{（10 分）}\sd
+系数行列式
+\[
+D=\begin{vmatrix}1&2&3\\3&-1&1\\1&-3&2\end{vmatrix}=1\cdot(-2+3)-2\cdot(6-1)+3\cdot(-9+1)=-33\neq0 .
+\]
+把第 $j$ 列换成右端列 $(9,10,11)^{\mathrm T}$，得
+\[
+D_1=-66,\qquad D_2=33,\qquad D_3=-99 .
+\]
+故
+\[
+x_1=\frac{D_1}{D}=2,\qquad x_2=\frac{D_2}{D}=-1,\qquad x_3=\frac{D_3}{D}=3 .
+\]
+
+\sola{4.}{（10 分）}\sd
+$f'(x)=4x^{3}+2ax=2x(2x^{2}+a)$。设 $t$ 为公共根。
+\par
+若 $t=0$，则 $f(0)=b=0$，此时 $f=x^{2}(x^{2}+a)$，$x=0$ 是二重根（$a=0$ 时是四重根）。
+\par
+若 $t\neq0$，则 $2t^{2}+a=0$，即 $t^{2}=-\dfrac a2$，于是
+\[
+f(t)=t^{4}+at^{2}+b=\frac{a^{2}}{4}-\frac{a^{2}}{2}+b=b-\frac{a^{2}}{4}=0
+\ \Longrightarrow\ a^{2}=4b .
+\]
+故所求全部 $(a,b)$ 为
+\[
+b=0\quad\text{或}\quad a^{2}=4b .
+\]
+\par
+当 $a^{2}=4b$ 且 $a<0$ 时，$t^{2}=-\dfrac a2>0$，故重根为
+\[
+x=\pm\sqrt{-\frac a2}.
+\]
+
+\sola{5.}{（15 分）}\pf
+(1) 设 $f$ 在 $P[x]$ 中不可约，$\deg f\ge1$，记 $d=(f,f')$。因 $d\mid f$ 且 $f$ 不可约，$d$ 只能是常数或与 $f$
+相差一个非零常数倍。若后者成立，则 $f\mid f'$，但 $\deg f'=\deg f-1<\deg f$，唯一可能是 $f'=0$；
+而在特征 $0$ 的域上非零常数的导数才为零，$f'=0$ 迫使 $f$ 为常数，与 $\deg f\ge1$ 矛盾。
+故 $d=1$，即 $(f,f')=1$。
+\par
+(2) 反之不成立。取 $f(x)=x^{4}+4$，则 $f'(x)=4x^{3}$，
+\[
+(x^{4}+4,\ 4x^{3})=1\quad(\text{因 }0\text{ 不是 }x^{4}+4\text{ 的根}),
+\]
+但 $f(x)=(x^{2}-2x+2)(x^{2}+2x+2)$ 在 $\mathbb{Q}[x]$ 中可约。
+
+\sola{6.}{（15 分）}\pf
+若 $f\equiv0$，取 $u=v=0$ 即可。以下设 $f\not\equiv0$。
+\par
+由 $f(x)\ge0\ (\forall x\in\mathbb{R})$ 知 $f$ 的实根都是偶数重的：若 $\alpha$ 是 $f$ 的 $k$ 重实根且 $k$ 为奇数，
+则 $f$ 在 $\alpha$ 两侧异号（因 $f=(x-\alpha)^{k}g$，$g(\alpha)\neq0$，$g$ 在 $\alpha$ 附近不变号），与 $f\ge0$ 矛盾。
+同时 $f$ 的首项系数 $a>0$（否则 $x\to\pm\infty$ 时 $f\to-\infty$）。
+\par
+于是 $f$ 在 $\mathbb{R}[x]$ 中的标准分解式为
+\[
+f(x)=a\prod_{s}\bigl(x-\alpha_s\bigr)^{2k_s}\prod_{t}\bigl(x^{2}+p_tx+q_t\bigr)^{m_t},
+\qquad a>0,\ p_t^{2}-4q_t<0 .
+\]
+其中
+\[
+a=\bigl(\sqrt a\bigr)^{2}+0^{2},\qquad
+\bigl(x-\alpha_s\bigr)^{2k_s}=\Bigl[\bigl(x-\alpha_s\bigr)^{k_s}\Bigr]^{2}+0^{2},
+\]
+\[
+x^{2}+p_tx+q_t=\Bigl(x+\frac{p_t}{2}\Bigr)^{2}+\Bigl(\sqrt{q_t-\frac{p_t^{2}}{4}}\Bigr)^{2}
+\quad\Bigl(\text{因 }q_t-\frac{p_t^{2}}{4}>0\Bigr).
+\]
+再由恒等式
+\[
+(U^{2}+V^{2})(X^{2}+Y^{2})=(UX-VY)^{2}+(UY+VX)^{2}
+\]
+知两个“平方和”之积仍是“平方和”。逐次相乘即得 $f=u^{2}+v^{2}$，其中 $u,v\in\mathbb{R}[x]$。
+
+\sola{7.}{（15 分）}\pf
+(1) 对 $n=\deg f$ 归纳。$n=0$ 时 $f$ 是非零常数，无根，结论成立。
+设 $n\ge1$ 且结论对次数小于 $n$ 的多项式成立。若 $f$ 在 $P$ 中没有根，则根数为 $0\le n$。
+若 $f$ 有根 $\alpha\in P$，设其重数为 $m\ge1$，则 $f=(x-\alpha)^{m}g$，其中 $g(\alpha)\neq0$，$\deg g=n-m<n$。
+由归纳假设 $g$ 在 $P$ 中至多有 $n-m$ 个根（重数计算），而 $f$ 的根由 $\alpha$（$m$ 重）与 $g$ 的根组成，
+故 $f$ 的根数（重数计算）至多 $m+(n-m)=n$。
+\par
+(2) 反设 $f\not\equiv0$，$\deg f=n$。由 (1)，$f$ 在 $P$ 中至多有 $n$ 个根。但题设 $f$ 在无穷多个 $x\in P$ 处取零，
+即有无穷多个根，矛盾。故 $f\equiv0$。
+
+\sola{8.}{（15 分）}\pf
+设 $A=(a_{ij})$，$a_{ij}\in\mathbb{Z}$，$|A|=\pm1$。记 $X=A^{-1}=(x_{ij})$。
+\par
+对每个固定的 $j$，$X$ 的第 $j$ 列 $x^{(j)}=(x_{1j},\dots,x_{nj})^{\mathrm T}$ 满足
+\[
+Ax^{(j)}=e_j .
+\]
+这是一个以 $A$ 为系数矩阵、右端为 $e_j$ 的线性方程组，其系数行列式 $|A|=\pm1\neq0$，由克拉默法则有唯一解，
+且
+\[
+x_{ij}=\frac{D_{ij}}{|A|},
+\]
+其中 $D_{ij}$ 是把 $A$ 的第 $i$ 列换成 $e_j$ 后所得矩阵的行列式。该矩阵的元素全为整数（$e_j$ 的分量为 $0,1$，
+$A$ 的分量为整数），故 $D_{ij}\in\mathbb{Z}$。又 $|A|=\pm1$，所以 $x_{ij}=\pm D_{ij}\in\mathbb{Z}$。
+即 $A^{-1}$ 的每个元素都是整数，$A^{-1}$ 是整数矩阵。
+
+%==================== 卷六 ====================
+\paperhead{模拟试卷（六）}
+
+\sola{1.}{（10 分）}\sd
+注意每一行的元素之和都等于 $x+a+b+c$，故作列变换 $C_1\leftarrow C_1+C_2+C_3+C_4$ 后第 $1$ 列全为
+$x+a+b+c$，提出该因子得
+\[
+D=(x+a+b+c)\begin{vmatrix}
+1&a&b&c\\
+1&x&c&b\\
+1&c&x&a\\
+1&b&a&x
+\end{vmatrix}.
+\]
+再作 $R_i\leftarrow R_i-R_1\ (i=2,3,4)$，第 $1$ 列的第 $2,3,4$ 个元素变为 $0$，按第 $1$ 列展开得
+\[
+D=(x+a+b+c)\begin{vmatrix}
+x-a&c-b&b-c\\
+c-a&x-b&a-c\\
+b-a&a-b&x-c
+\end{vmatrix}.
+\]
+把这个三阶行列式按第 $1$ 行展开并整理（例如令 $p=x-a,\ q=c-b,\ s=a-b$，则各元素为
+$p,q,-q$；$q-s,\ p+s,\ s-q$；$-s,\ s,\ p+s-q$，直接展开后分解），得
+\[
+\begin{vmatrix}
+x-a&c-b&b-c\\
+c-a&x-b&a-c\\
+b-a&a-b&x-c
+\end{vmatrix}
+=(x+a-b-c)(x-a+b-c)(x-a-b+c).
+\]
+于是在 $\mathbb{C}[x]$ 中
+\[
+D=(x+a+b+c)(x+a-b-c)(x-a+b-c)(x-a-b+c).
+\]
+\emph{提示：}$a=b=c=0$ 时 $D=x^{4}$，与上式一致（四个因子均为 $x$），可用作快速校验。
+
+\sola{2.}{（10 分）}\sd
+按第一行展开：第一行只有第 $2$ 个元素为 $1$，其代数余子式为 $(-1)^{1+2}D_{n-2}=-D_{n-2}$（删去后所得
+子式的第一列为 $(1,0,\dots,0)^{\mathrm T}$），故
+\[
+D_n=-D_{n-2},\qquad D_1=0,\quad D_2=\begin{vmatrix}0&1\\1&0\end{vmatrix}=-1 .
+\]
+于是
+\[
+D_n=\begin{cases}
+0, & n\ \text{为奇数},\\[4pt]
+(-1)^{n/2}, & n\ \text{为偶数}.
+\end{cases}
+\]
+
+\sola{3.}{（10 分）}\sd
+(1) $x^{6}-1=(x^{3}-1)(x^{3}+1)$，而
+\[
+x^{3}-1=(x-1)(x^{2}+x+1),\qquad x^{3}+1=(x+1)(x^{2}-x+1).
+\]
+两个二次因式在 $\mathbb{Q}$ 上不可约（其判别式分别为 $-3,-3$，无有理根），故
+\[
+\mathbb{Q}[x]:\quad x^{6}-1=(x-1)(x+1)(x^{2}+x+1)(x^{2}-x+1);
+\]
+在 $\mathbb{R}[x]$ 中，$x^{2}+x+1$ 与 $x^{2}-x+1$ 仍不可约，故分解式与上面相同；
+在 $\mathbb{C}[x]$ 中，
+\[
+x^{6}-1=\prod_{k=0}^{5}\bigl(x-\zeta^{k}\bigr),\qquad \zeta=\mathrm{e}^{\pi\mathrm{i}/3}=\frac12+\frac{\sqrt3}{2}\mathrm{i}.
+\]
+\par
+(2) $f'(x)=6x^{5}$，而 $0$ 不是 $f$ 的根，故 $(f,f')=1$，$f(x)$ 无重因式（等价地，$f$ 无重根）。
+
+\sola{4.}{（10 分）}\sd
+(1) 有理根只可能是 $\pm1,\pm2,\pm3,\pm6,\pm\frac12,\pm\frac32$。由
+\[
+f(1)=2-7+4+7-6=0,\qquad f(-1)=2+7+4-7-6=0
+\]
+知 $(x-1)(x+1)=x^{2}-1$ 整除 $f$，作除法得
+\[
+f=(x^{2}-1)\bigl(2x^{2}-7x+6\bigr)=(x-1)(x+1)(2x-3)(x-2).
+\]
+四个因式都是一次式（或一次式的常数倍），故上式即为 $\mathbb{Q}[x]$ 中的标准分解式，$f$ 的根为
+$1,\ -1,\ \frac32,\ 2$。
+\par
+(2) 由 $f$ 的标准分解式可见所有一次因式互不相同（重数均为 $1$），故 $f$ 无重因式。
+（也可验证 $f'(x)=8x^{3}-21x^{2}+8x+7$ 与 $f$ 互素。）
+
+\sola{5.}{（15 分）}\pf
+(1) 设 $f$ 首一，且在 $\mathbb{Q}[x]$ 上可约：$f(x)=G(x)H(x)$，$1\le\deg G,\deg H<n$。
+因 $f$ 首一，取 $G,H$ 首一即可使 $G,H\in\mathbb{Z}[x]$（由高斯引理，首一整系数多项式的有理分解可提升为整系数分解）。
+把系数模 $p$ 得
+\[
+\bar f(x)=\bar G(x)\bar H(x).
+\]
+由于 $f,G,H$ 都首一，模 $p$ 后首项系数仍为 $1$，故次数不下降：$\deg\bar G=\deg G\ge1$，$\deg\bar H=\deg H\ge1$，
+且 $\deg\bar G,\deg\bar H<\deg\bar f=n$。这与“$\bar f$ 不能分解为两个次数较低的多项式之积”矛盾。
+故 $f$ 在 $\mathbb{Q}[x]$ 上不可约。
+\par
+(2) 反例说明“首一”不能去掉。取
+\[
+f(x)=2x^{2}+5x+2=(2x+1)(x+2),
+\]
+它在 $\mathbb{Q}[x]$ 上可约。取 $p=2$，则 $\bar f(x)=5x+2\equiv x\pmod 2$ 是一次多项式，
+不能分解为两个次数较低的多项式之积，但 $f$ 可约。
+\\[2pt]
+\emph{原因：}$p=2$ 整除首项系数 $2$，模 $p$ 后次数由 $2$ 降为 $1$，条件失效。
+
+\sola{6.}{（15 分）}\pf
+设 $f$ 在 $P[x]$ 中的标准分解式为 $f=a\,p_1^{k_1}p_2^{k_2}\cdots p_s^{k_s}$，其中 $p_i$ 是互不相同的首一不可约多项式，
+$k_i\ge1$。由求导法则
+\[
+f'=\sum_{i=1}^{s}k_ip_i^{k_i-1}p_i'\prod_{j\neq i}p_j^{k_j}.
+\]
+\par
+(1) 若某个 $k_i\ge2$，则 $f$ 的表达式右边每一项都含因子 $p_i^{k_i-1}$（第 $i$ 项含
+$k_ip_i^{k_i-1}p_i'\prod_{j\neq i}p_j^{k_j}$，其余项含 $p_i^{k_i}\cdot(\cdots)$），故
+$p_i^{k_i-1}\mid f'$，从而 $p_i\mid f'$，即 $p_i$ 是 $f,f'$ 的公因式，$(f,f')\neq1$。
+\par
+(2) 若所有 $k_i=1$，则 $f'=\sum_i p_i'\prod_{j\neq i}p_j$。对固定的 $i$，考察 $p_i\mid f'$：
+上式除第 $i$ 项外都含因子 $p_i$，故须 $p_i\mid p_i'\prod_{j\neq i}p_j$。
+但 $\deg p_i'=\deg p_i-1<\deg p_i$，故 $p_i\nmid p_i'$（否则 $p_i\mid p_i'$ 与次数关系矛盾）；
+又 $p_i\neq p_j\ (j\neq i)$ 且 $p_i$ 不可约，故 $p_i\nmid p_j$。于是 $p_i\nmid f'$ 对每个 $i$ 成立，
+$(f,f')=1$。
+\par
+综上：$f$ 无重因式 $\iff (f,f')=1$。
+
+\sola{7.}{（15 分）}\pf
+设 $d(x)=\bigl(f(x),g(x)\bigr)$ 为 $f,g$ 的首一最大公因式。
+\par
+因 $f(\alpha)=g(\alpha)=0$，若 $d=1$，则存在 $u,v\in\mathbb{Q}[x]$ 使 $uf+vg=1$，在 $\alpha$ 处取值得
+$0=1$，矛盾。故 $\deg d\ge1$。
+\par
+又 $d\mid f$，而 $f$ 在 $\mathbb{Q}[x]$ 上不可约，$\deg f\ge1$，故 $d$ 与 $f$ 只相差一个非零常数倍，
+即 $f\sim d$，从而 $f\mid d$。于是 $f\mid d\mid g$，即 $f(x)\mid g(x)$。
+\par
+\emph{说明：}本题说明不可约多项式是“最小”的：凡是使 $f$ 的根为零的多项式，都被 $f$ 整除。
+
+\sola{8.}{（15 分）}\pf
+(1) 对任意 $n$ 阶方阵，$|A|=\bigl|A^{\mathrm T}\bigr|$。若 $A$ 反对称，则 $A^{\mathrm T}=-A$，故
+\[
+|A|=\bigl|A^{\mathrm T}\bigr|=|-A|=(-1)^{n}|A| .
+\]
+当 $n$ 为奇数时 $|A|=-|A|$，即 $2|A|=0$，在 $\mathbb{R}$（特征 $0$）中得 $|A|=0$。
+\par
+(2) 设 $n=4$，记
+\[
+a=a_{12},\quad b=a_{13},\quad c=a_{14},\quad d=a_{23},\quad e=a_{24},\quad f=a_{34},
+\]
+则
+\[
+A=\begin{pmatrix}
+0&a&b&c\\
+-a&0&d&e\\
+-b&-d&0&f\\
+-c&-e&-f&0
+\end{pmatrix},
+\qquad
+P:=af-be+cd .
+\]
+计算 $A$ 的第一行各元素的代数余子式（$A_{11}=0$，因三阶反对称行列式为 $0$）。三个余子式（即相应的
+三阶子式带符号）为
+\[
+M_{12}=-fP,\qquad M_{13}=-eP,\qquad M_{14}=-dP,
+\]
+故
+\[
+A_{12}=(-1)^{1+2}M_{12}=fP,\qquad
+A_{13}=(-1)^{1+3}M_{13}=-eP,\qquad
+A_{14}=(-1)^{1+4}M_{14}=dP .
+\]
+（以 $M_{12}$ 为例：
+$M_{12}=\begin{vmatrix}-a&d&e\\-b&0&f\\-c&-f&0\end{vmatrix}
+=-\bigl[af^{2}+cdf-bef\bigr]=-f\,(af-be+cd)$。）于是按第 $1$ 行展开得
+\[
+|A|=a_{11}A_{11}+aA_{12}+bA_{13}+cA_{14}
+=0+a\cdot fP+b\cdot(-eP)+c\cdot dP=P\,(af-be+cd)=P^{2},
+\]
+即
+\[
+|A|=\bigl(a_{12}a_{34}-a_{13}a_{24}+a_{14}a_{23}\bigr)^{2}\ \ge 0 .
+\]
+\emph{注：}括号内的量称为 $A$ 的普法夫（Pfaffian），本题即“四阶反对称行列式等于其普法夫的平方”。
+
+\vspace{10pt}
+\hrule height 0.5pt
+\vspace{4pt}
+{\small\color{hdgray}\songti 全卷完\ \ 共六套模拟卷、48 道题。}
+
+\end{document}
